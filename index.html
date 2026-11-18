@@ -1,272 +1,445 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trash Stalk | UN SDG 11</title>
+    <!-- Google Fonts for crisp, student-friendly typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 
-    <title>TrashStalk | A Cleaner Future</title>
+    <style>
+        /* Basic Reset and Box Sizing */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    <link rel="stylesheet" href="style.css">
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f6f1ea; /* Warm light beige background */
+            color: #1f2937;
+            line-height: 1.65;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* ================= REFINED UPPER HEADER SECTION ================= */
+        .site-header {
+            background-color: #bc7a9b;
+            color: #1a0f14;
+            border-bottom: 2px solid #2d1b24;
+            padding: 20px 28px 26px;
+            box-shadow: 0 3px 10px rgba(45, 27, 36, 0.08);
+        }
+
+        .header-frame {
+            max-width: 1080px;
+            margin: 0 auto;
+            border: 1.5px solid rgba(45, 27, 36, 0.25);
+            border-radius: 14px;
+            background-color: rgba(255, 255, 255, 0.08);
+            padding: 16px 24px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .header-top-row {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .member-credits {
+            font-size: 0.88rem;
+            font-weight: 500;
+            color: #1a0f14;
+            background-color: rgba(246, 241, 234, 0.35);
+            padding: 4px 12px;
+            border-radius: 20px;
+            border: 1px solid rgba(45, 27, 36, 0.2);
+        }
+
+        .main-title {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            font-size: 3.1rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: #160c11;
+            line-height: 1.15;
+            margin: 4px 0;
+        }
+
+        .header-bottom-row {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .group-badge {
+            font-size: 0.92rem;
+            font-weight: 600;
+            color: #1a0f14;
+            background-color: #edd0de;
+            border: 1.5px solid #2d1b24;
+            border-radius: 8px;
+            padding: 4px 14px;
+        }
+
+        /* ================= MAIN CONTENT SECTION ================= */
+        .main-content {
+            max-width: 1080px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 44px 28px;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.15fr;
+            gap: 48px;
+            align-items: center;
+            width: 100%;
+        }
+
+        /* Left Column: Text and Dashed Dividers */
+        .text-column {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .dashed-divider {
+            border: none;
+            border-top: 2px dashed #4b3842;
+            width: 85%;
+            margin: 0;
+        }
+
+        .text-body {
+            padding: 26px 0;
+        }
+
+        .section-heading {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.85rem;
+            font-weight: 700;
+            color: #160c11;
+            margin-bottom: 16px;
+        }
+
+        .text-body p {
+            font-size: 0.98rem;
+            color: #292226;
+            margin-bottom: 16px;
+            text-align: left;
+        }
+
+        .text-body p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Right Column: 3-Image Collage */
+        .media-collage {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .top-media-row {
+            display: grid;
+            grid-template-columns: 1fr 1.25fr;
+            gap: 16px;
+        }
+
+        /* SDG 11 Orange Card */
+        .sdg-card {
+            background-color: #fd9d24;
+            color: #ffffff;
+            border: 1.5px solid rgba(45, 27, 36, 0.18);
+            border-radius: 12px;
+            padding: 18px;
+            aspect-ratio: 1 / 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 5px 14px rgba(45, 27, 36, 0.08);
+        }
+
+        .sdg-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .sdg-number {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.75rem;
+            font-weight: 800;
+            line-height: 0.95;
+        }
+
+        .sdg-label {
+            font-size: 0.72rem;
+            font-weight: 800;
+            line-height: 1.2;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+        }
+
+        .sdg-svg {
+            width: 100%;
+            height: auto;
+            margin-top: 8px;
+        }
+
+        /* Photo Containers */
+        .photo-card {
+            border: 1.5px solid rgba(45, 27, 36, 0.18);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 14px rgba(45, 27, 36, 0.08);
+            background-color: #e8dfd3;
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .top-photo {
+            aspect-ratio: 1.25 / 1;
+        }
+
+        .bottom-photo {
+            height: 210px;
+        }
+
+        /* ================= REFINED STRAIGHT-EDGED FOOTER SECTION ================= */
+        .site-footer {
+            background-color: #bc7a9b;
+            border-top: 2px solid #2d1b24;
+            padding: 24px 28px 26px;
+            margin-top: 12px;
+            box-shadow: 0 -3px 10px rgba(45, 27, 36, 0.08);
+        }
+
+        .footer-frame {
+            max-width: 1080px;
+            margin: 0 auto;
+            border: 1.5px solid rgba(45, 27, 36, 0.25);
+            border-radius: 14px;
+            background-color: rgba(255, 255, 255, 0.08);
+            padding: 20px 24px 18px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .footer-nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 14px;
+            width: 100%;
+        }
+
+        .nav-pill {
+            display: inline-block;
+            text-decoration: none;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: #1a0f14;
+            background-color: #c98eab;
+            border: 1.5px solid #2d1b24;
+            border-radius: 10px;
+            padding: 11px 18px;
+            cursor: default;
+        }
+
+        /* Active Page Pill Styling (Page 1) */
+        .nav-pill.active {
+            background-color: #edd0de;
+            font-weight: 700;
+            box-shadow: 0 2px 6px rgba(45, 27, 36, 0.14);
+        }
+
+        .footer-note {
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #24131b;
+            text-align: center;
+            border-top: 1px solid rgba(45, 27, 36, 0.25);
+            padding-top: 14px;
+            width: 100%;
+            max-width: 680px;
+        }
+
+        /* ================= RESPONSIVE DESIGN ================= */
+        @media (max-width: 850px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 36px;
+            }
+
+            .main-title {
+                font-size: 2.4rem;
+            }
+
+            .header-top-row,
+            .header-bottom-row {
+                justify-content: center;
+            }
+
+            .member-credits {
+                font-size: 0.82rem;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .top-media-row {
+                grid-template-columns: 1fr;
+            }
+
+            .sdg-card {
+                aspect-ratio: auto;
+            }
+
+            .bottom-photo {
+                height: 180px;
+            }
+
+            .nav-pill {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
-
 <body>
 
-    <!-- NAVIGATION -->
-    <nav class="navbar">
-        <div class="logo">♻ JANSEN PROF NA KALBO</div>
-
-        <div class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#issue">The Issue</a>
-            <a href="#facts">Facts</a>
-            <a href="#about">About Us</a>
+    <!-- REFINED UPPER HEADER BANNER -->
+    <header class="site-header">
+        <div class="header-frame">
+            <div class="header-top-row">
+                <span class="member-credits">Balmeo, Barrieses, Belandres, Quinto</span>
+            </div>
+            <h1 class="main-title">Trash Stalk</h1>
+            <div class="header-bottom-row">
+                <span class="group-badge">By: Group 4</span>
+            </div>
         </div>
-    </nav>
-
-
-    <!-- HERO SECTION -->
-    <header id="home" class="hero">
-
-        <div class="hero-content">
-
-            <span class="tag">A CLEANER TOMORROW STARTS TODAY</span>
-
-            <h1>
-                Cleaner Communities,
-                <span>Safer Future.</span>
-            </h1>
-
-            <p>
-                Discover how improper waste management
-                contributes to flooding and why every
-                community plays an important role in
-                protecting our environment.
-            </p>
-
-            <a href="#issue" class="hero-link">
-                Explore the Issue ↓
-            </a>
-
-        </div>
-
-        <div class="hero-image">
-            <img
-                src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e"
-                alt="Beautiful green forest and nature">
-        </div>
-
     </header>
 
+    <!-- MAIN CONTENT ON WARM LIGHT BEIGE -->
+    <main class="main-content">
+        <div class="content-grid">
 
-    <!-- DESCRIPTION OF THE ISSUE -->
-    <section id="issue" class="issue-section">
+            <!-- Left Column: Introductory Text -->
+            <section class="text-column">
+                <hr class="dashed-divider">
 
-        <div class="section-heading">
-            <span>UNDERSTANDING THE PROBLEM</span>
-            <h2>Description of the Issue</h2>
-            <div class="heading-line"></div>
-        </div>
+                <div class="text-body">
+                    <h2 class="section-heading">What is SDG 11?</h2>
+                    <p>
+                        SDG 11, also known as the “Sustainable Cities and Communities” Development Goal, is a goal created by the United Nations, aiming to transform cities into safer, more sustainable habitats by reducing urban hazards, optimizing resource efficiency, and ensuring resilient infrastructure for every resident.
+                    </p>
+                    <p>
+                        As time goes by, the Philippines' dire need of assistance when it comes to creating thriving, livable cities increases. And because of that, we, Group 5, have developed a plan that can effectively help in that area, particularly towards garbage management and the cleaning of our streets. First, let us identify the problem at hand.
+                    </p>
+                </div>
 
-        <div class="issue-content">
+                <hr class="dashed-divider">
+            </section>
 
-            <div class="issue-image">
-                <img
-                    src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b"
-                    alt="Waste and environmental pollution">
-            </div>
+            <!-- Right Column: 3-Image Collage -->
+            <section class="media-collage" aria-label="SDG 11 Visual Collage">
+                <div class="top-media-row">
+                    <!-- Top-Left: UN SDG 11 Graphic -->
+                    <div class="sdg-card">
+                        <div class="sdg-header">
+                            <span class="sdg-number">11</span>
+                            <div class="sdg-label">
+                                Sustainable Cities<br>and Communities
+                            </div>
+                        </div>
+                        <svg class="sdg-svg" viewBox="0 0 220 115" fill="currentColor" aria-label="Sustainable Cities Skyline Icon">
+                            <!-- Left House -->
+                            <polygon points="10,65 30,45 50,65" />
+                            <rect x="14" y="65" width="32" height="44" />
+                            <rect x="25" y="85" width="10" height="24" fill="#fd9d24" />
+                            <!-- Center Tall Building -->
+                            <rect x="58" y="18" width="44" height="91" />
+                            <rect x="66" y="28" width="9" height="11" fill="#fd9d24" />
+                            <rect x="85" y="28" width="9" height="11" fill="#fd9d24" />
+                            <rect x="66" y="46" width="9" height="11" fill="#fd9d24" />
+                            <rect x="85" y="46" width="9" height="11" fill="#fd9d24" />
+                            <rect x="66" y="64" width="9" height="11" fill="#fd9d24" />
+                            <rect x="85" y="64" width="9" height="11" fill="#fd9d24" />
+                            <rect x="66" y="82" width="9" height="11" fill="#fd9d24" />
+                            <rect x="85" y="82" width="9" height="11" fill="#fd9d24" />
+                            <!-- Slanted Eco Building -->
+                            <polygon points="110,54 154,26 154,109 110,109" />
+                            <rect x="120" y="60" width="10" height="10" fill="#fd9d24" />
+                            <rect x="136" y="50" width="10" height="10" fill="#fd9d24" />
+                            <rect x="120" y="77" width="10" height="10" fill="#fd9d24" />
+                            <rect x="136" y="77" width="10" height="10" fill="#fd9d24" />
+                            <rect x="120" y="94" width="10" height="15" fill="#fd9d24" />
+                            <rect x="136" y="94" width="10" height="15" fill="#fd9d24" />
+                            <!-- Right Building -->
+                            <rect x="162" y="60" width="46" height="49" />
+                            <rect x="170" y="70" width="11" height="10" fill="#fd9d24" />
+                            <rect x="189" y="70" width="11" height="10" fill="#fd9d24" />
+                            <rect x="170" y="87" width="11" height="10" fill="#fd9d24" />
+                            <rect x="189" y="87" width="11" height="10" fill="#fd9d24" />
+                        </svg>
+                    </div>
 
-            <div class="issue-text">
+                    <!-- Top-Right: Clean Rizal Park (Luneta Park) Photograph -->
+                    <div class="photo-card top-photo">
+                        <img
+                            src="https://commons.wikimedia.org/wiki/Special:FilePath/Rizal_Monument_(Manila,_2024).jpg?width=800"
+                            onerror="this.onerror=null;this.src='https://placehold.co/600x480/bc7a9b/ffffff?text=Rizal+Park,+Manila';"
+                            alt="Rizal Monument at Rizal Park (Luneta Park) in Manila, Philippines on a sunny day"
+                        >
+                    </div>
+                </div>
 
-                <p>
-                Improper waste management is a serious
-                environmental problem in the Philippines,
-                particularly in highly populated communities.
-                Improperly disposed garbage, overflowing trash
-                bins, illegal dumping, and uncollected waste
-                contribute to the accumulation of solid waste
-                in streets, canals, rivers, and drainage systems.
-                </p>
-
-                <p>
-                One of the major consequences of this problem
-                is the obstruction of waterways. When garbage
-                accumulates in drainage systems, it prevents
-                rainwater from flowing freely, which can worsen
-                flooding during heavy rainfall and typhoons.
-                </p>
-
-                <p>
-                Flooding can affect many aspects of people's
-                lives. It can damage homes and public
-                infrastructure, disrupt transportation, affect
-                businesses, contaminate water sources, and expose
-                communities to health and safety risks.
-                </p>
-
-                <p>
-                Furthermore, continuous waste accumulation
-                contributes to water pollution, unpleasant
-                surroundings, and environmental degradation.
-                These conditions make communities more
-                vulnerable to heavy rainfall and other
-                environmental hazards.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- FACTS AND INFORMATION -->
-    <section id="facts" class="facts-section">
-
-        <div class="section-heading">
-            <span>KNOW THE FACTS</span>
-            <h2>Facts and Information</h2>
-            <div class="heading-line"></div>
-            <p>
-                Understanding the impact of improper waste
-                management through facts and research.
-            </p>
-        </div>
-
-
-        <!-- HIGHLIGHTED STATISTIC -->
-        <div class="statistic">
-            <h3>872,000+</h3>
-            <p>
-                Sacks of solid waste and debris removed from
-                critical Metro Manila waterways during the
-                first half of 2025.
-            </p>
-            <span>Source: Philippine Information Agency (2025)</span>
-        </div>
-
-
-        <div class="facts-container">
-
-            <div class="fact-card">
-                <div class="fact-number">01</div>
-                <h3>Improper Waste Disposal and Flooding</h3>
-                <p>
-                    According to DENR-NCR (2025), improper waste
-                    disposal remains a major cause of clogged
-                    waterways, which worsens flooding during
-                    heavy rainfall.
-                </p>
-            </div>
-
-
-            <div class="fact-card">
-                <div class="fact-number">02</div>
-                <h3>Waste Accumulation in Metro Manila Waterways</h3>
-                <p>
-                    According to the Philippine Information
-                    Agency (2025), more than 872,000 sacks of
-                    solid waste and debris were removed from
-                    critical waterways in Metro Manila during
-                    the first half of 2025.
-                </p>
-            </div>
-
-
-            <div class="fact-card">
-                <div class="fact-number">03</div>
-                <h3>Flooding and Community Safety</h3>
-                <p>
-                    According to the United Nations, SDG 11,
-                    Target 11.5, emphasizes reducing the number
-                    of people affected by disasters, including
-                    water-related disasters.
-                </p>
-            </div>
-
-
-            <div class="fact-card">
-                <div class="fact-number">04</div>
-                <h3>Environmental Impact</h3>
-                <p>
-                    According to the United Nations, SDG 11,
-                    Target 11.6, highlights the importance of
-                    reducing the environmental impact of cities
-                    through proper municipal waste management.
-                </p>
-            </div>
-
-
-            <div class="fact-card">
-                <div class="fact-number">05</div>
-                <h3>Urban Development and Flooding</h3>
-                <p>
-                    According to the US EPA (2025), rainwater
-                    flowing over paved surfaces such as roads,
-                    parking areas, and rooftops can increase
-                    stormwater runoff because these surfaces
-                    prevent water from naturally soaking into
-                    the ground.
-                </p>
-            </div>
+                <!-- Bottom Wide Image: Sustainable City with Trees & Solar Panels -->
+                <div class="photo-card bottom-photo">
+                    <img
+                        src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1200&q=80"
+                        onerror="this.onerror=null;this.src='https://placehold.co/1000x450/4b7f52/ffffff?text=Sustainable+Green+City';"
+                        alt="Sustainable city buildings with trees and solar panels"
+                    >
+                </div>
+            </section>
 
         </div>
+    </main>
 
-    </section>
-
-
-    <!-- ABOUT US -->
-    <section id="about" class="about-section">
-
-        <div class="about-content">
-
-            <span>OUR PURPOSE</span>
-
-            <h2>About TrashStalk</h2>
-
-            <p>
-                TrashStalk is a proposed digital solution that
-                aims to promote proper waste management,
-                environmental awareness, and community
-                participation. Through accessible information
-                and innovative technology, it encourages
-                communities to work together toward cleaner
-                surroundings and safer neighborhoods.
-            </p>
-
-            <h3>Small Actions. Big Changes.</h3>
-
+    <!-- REFINED STRAIGHT-EDGED FOOTER NAVIGATION -->
+    <footer class="site-footer">
+        <div class="footer-frame">
+            <nav class="footer-nav" aria-label="Page Navigation">
+                <a href="#intro" class="nav-pill active">[Page 1: The Introduction]</a>
+                <a href="#problem" class="nav-pill">[Page 2: The Problem]</a>
+                <a href="#solution" class="nav-pill">[Page 3: The Solution]</a>
+                <a href="#involved" class="nav-pill">[Page 4: The Way To Get Involved]</a>
+            </nav>
+            <p class="footer-note">Trash Stalk &bull; UN Sustainable Development Goal 11: Sustainable Cities and Communities</p>
         </div>
-
-    </section>
-
-
-    <!-- REFERENCES -->
-    <section class="references-section">
-
-        <h2>References</h2>
-
-        <ul>
-            <li>Department of Environment and Natural Resources – National Capital Region (2025).</li>
-            <li>Philippine Information Agency (2025).</li>
-            <li>United Nations. Sustainable Development Goal 11, Targets 11.5 and 11.6.</li>
-            <li>United States Environmental Protection Agency (2025).</li>
-        </ul>
-
-        <p class="reference-note">
-            Complete publication titles and source URLs
-            should be added to the final reference list.
-        </p>
-
-    </section>
-
-
-    <!-- FOOTER -->
-    <footer>
-        <h2>♻ TrashStalk</h2>
-        <p>Cleaner Communities, Safer Future.</p>
-        <p>Promoting responsible waste management and flood prevention.</p>
-        <small>© 2026 TrashStalk | Environmental Awareness Project</small>
     </footer>
 
 </body>
