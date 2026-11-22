@@ -127,8 +127,6 @@
 
         .slide {
             width: 50%;
-            min-width: 50%;
-            flex-shrink: 0;
             padding: 30px 22px 25px;
         }
 
@@ -160,7 +158,6 @@
             outline: none;
             resize: none;
             color: #713D16;
-            background-color: transparent;
         }
 
         .slide form input:focus,
@@ -291,7 +288,6 @@
             justify-content: center;
             align-items: center;
             font-size: 18px;
-            flex-shrink: 0;
         }
 
         .pledge-text h3 {
@@ -311,9 +307,10 @@
             border-top: 2px dashed #FD9D24;
             display: flex;
             gap: 12px;
+            flex-wrap: wrap;
         }
 
-        .pledge-sign input {
+        .pledge-sign input[type="text"] {
             flex: 1;
             border: 1px solid #E6C7AE;
             border-radius: 20px;
@@ -336,6 +333,20 @@
 
         .pledge-btn:hover {
             background-color: #D96F0B;
+        }
+
+        .pledge-message {
+            display: none;
+            width: 100%;
+            margin-top: 12px;
+            text-align: center;
+            color: #A94E00;
+            font-weight: bold;
+            font-size: 13px;
+        }
+
+        .pledge-btn:active ~ .pledge-message {
+            display: block;
         }
 
         .organizations {
@@ -642,10 +653,12 @@
 
                     </div>
 
-                    <div class="pledge-sign">
-                        <input type="text" id="pledgeName" placeholder="Enter your full name">
-                        <button type="button" class="pledge-btn">Take the Pledge</button>
-                    </div>
+                    <form class="pledge-sign" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="c761d548-f47e-4f67-9a6d-1a9cb1a3ffc9">
+                        <input type="text" name="pledge_name" placeholder="Enter your full name" required>
+                        <button type="submit" class="pledge-btn">Take the Pledge</button>
+                        <p class="pledge-message">Thank you! Your pledge for a cleaner community has been recorded.</p>
+                    </form>
                 </div>
             </section>
 
