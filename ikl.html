@@ -1,0 +1,1029 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TrashStalk | Get Involved</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #FFF4E5;
+            color: #713D16;
+            min-height: 100vh;
+            padding: 35px 25px;
+        }
+
+        /* HEADER */
+        header {
+            max-width: 1200px;
+            margin: auto;
+            background-color: #FFFFFF;
+            padding: 18px 25px;
+            border-radius: 15px;
+            border: 1px solid #FFE5C2;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            color: #713D16;
+        }
+
+        header h1 span {
+            color: #FD9D24;
+        }
+
+        nav a {
+            color: #713D16;
+            text-decoration: none;
+            margin-left: 15px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #D96F0B;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .page-wrapper {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+            margin-top: 30px;
+        }
+
+        /* CONTACT SECTION */
+        .card-container {
+            width: 360px;
+            flex-shrink: 0;
+            background-color: #FD9D24;
+            padding: 25px 20px;
+            border-radius: 30px;
+            border: 1px solid #FD9D24;
+        }
+
+        .contact-title {
+            color: #FFFFFF;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            height: 70px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .tab-icon {
+            background-color: #FFFFFF;
+            color: #D96F0B;
+            width: 50px;
+            height: 50px;
+            border-radius: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            cursor: pointer;
+            transition: 0.4s;
+            border: 1px solid #FFE5C2;
+        }
+
+        #btn-contact:checked ~ .tabs label[for="btn-contact"],
+        #btn-map:checked ~ .tabs label[for="btn-map"] {
+            width: 80px;
+            height: 80px;
+            font-size: 30px;
+            color: #A94E00;
+        }
+
+        .slider-window {
+            background-color: #FFFFFF;
+            border-radius: 22px;
+            overflow: hidden;
+            border: 1px solid #FFE5C2;
+        }
+
+        .slider-track {
+            display: flex;
+            width: 200%;
+            transition: transform 0.5s ease;
+        }
+
+        #btn-contact:checked ~ .slider-window .slider-track {
+            transform: translateX(0);
+        }
+
+        #btn-map:checked ~ .slider-window .slider-track {
+            transform: translateX(-50%);
+        }
+
+        .slide {
+            width: 50%;
+            flex-shrink: 0;
+            padding: 40px 22px 25px;
+        }
+
+        .slide h2 {
+            color: #713D16;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .slide p {
+            color: #8B735F;
+            font-size: 12px;
+            margin-bottom: 20px;
+        }
+
+        .slide form label {
+            display: block;
+            font-size: 12px;
+            color: #A94E00;
+            margin-top: 14px;
+        }
+
+        .slide form input,
+        .slide form textarea {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #E6C7AE;
+            padding: 8px 0;
+            font-size: 13px;
+            outline: none;
+            resize: none;
+            color: #713D16;
+        }
+
+        .slide form input:focus,
+        .slide form textarea:focus {
+            border-bottom: 1px solid #FD9D24;
+        }
+
+        .submit-btn {
+            display: block;
+            margin: 22px auto 0;
+            padding: 10px 35px;
+            background-color: #FD9D24;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 20px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #D96F0B;
+        }
+
+        /* MAP */
+        .map-box {
+            margin-top: 15px;
+            height: 270px;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .map-box iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .map-label {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            background-color: #FFFFFF;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #FFE5C2;
+            font-size: 11px;
+            z-index: 1;
+        }
+
+        .map-label strong {
+            display: block;
+            color: #713D16;
+        }
+
+        .map-label span {
+            display: block;
+            color: #8B735F;
+            margin-top: 4px;
+        }
+
+        /* PLEDGE SECTION */
+        .pledge-container {
+            flex: 1;
+            background-color: #FFF8EF;
+            border: 1px solid #FFE5C2;
+            padding: 22px;
+            border-radius: 28px;
+        }
+
+        .pledge-main-title {
+            color: #713D16;
+            border-left: 5px solid #FD9D24;
+            padding-left: 14px;
+            font-size: 19px;
+            line-height: 1.4;
+            margin-bottom: 16px;
+        }
+
+        .pledge-card {
+            background-color: #FFFFFF;
+            border-radius: 20px;
+            padding: 20px 22px;
+            border: 1px solid #FFE5C2;
+        }
+
+        .pledge-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .pledge-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #F3ECE6;
+        }
+
+        .pledge-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .pledge-icon {
+            width: 42px;
+            height: 42px;
+            flex-shrink: 0;
+            background-color: #FFF8EF;
+            color: #D96F0B;
+            border-radius: 12px;
+            border: 1px solid #FFE5C2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+        }
+
+        .pledge-text h3 {
+            font-size: 15px;
+            color: #D96F0B;
+            margin-bottom: 3px;
+        }
+
+        .pledge-text p {
+            font-size: 13px;
+            color: #713D16;
+            line-height: 1.45;
+        }
+
+        .pledge-sign {
+            margin-top: 18px;
+            padding-top: 16px;
+            border-top: 2px dashed #FD9D24;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .pledge-sign input {
+            flex: 1;
+            min-width: 0;
+            border: 1px solid #E6C7AE;
+            border-radius: 20px;
+            padding: 10px 16px;
+            font-size: 13px;
+            color: #713D16;
+            outline: none;
+        }
+
+        .pledge-sign input:focus {
+            border-color: #FD9D24;
+        }
+
+        /* ORGANIZATIONS */
+        .organizations {
+            margin-top: 50px;
+            background-color: #FFFFFF;
+            padding: 28px;
+            border-radius: 22px;
+            border: 1px solid #FFE5C2;
+        }
+
+        .organizations > h1 {
+            color: #713D16;
+            font-size: 26px;
+        }
+
+        .section-description {
+            color: #8B735F;
+            margin-top: 8px;
+            margin-bottom: 22px;
+        }
+
+        .organization-list {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .organization-card {
+            background-color: #FFFFFF;
+            border: 1px solid #FFE5C2;
+            border-radius: 15px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s ease;
+        }
+
+        .organization-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .organization-heading {
+            padding: 26px 12px;
+            color: #FFFFFF;
+            text-align: center;
+        }
+
+        .denr {
+            background-color: #FD9D24;
+        }
+
+        .wwf {
+            background-color: #713D16;
+        }
+
+        .greenpeace {
+            background-color: #D96F0B;
+        }
+
+        .mother-earth {
+            background-color: #A94E00;
+        }
+
+        .organization-info {
+            padding: 18px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .organization-info small {
+            color: #A94E00;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 11px;
+            letter-spacing: 0.4px;
+        }
+
+        .organization-info h3 {
+            margin-top: 6px;
+            margin-bottom: 8px;
+            color: #713D16;
+        }
+
+        .organization-info p {
+            color: #8B735F;
+            font-size: 13px;
+            line-height: 1.5;
+            margin-bottom: 16px;
+            flex: 1;
+        }
+
+        .organization-info a {
+            display: block;
+            background-color: #FFF8EF;
+            color: #A94E00;
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 13px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.25s ease;
+        }
+
+        .organization-info a:hover {
+            background-color: #FD9D24;
+            color: #FFFFFF;
+        }
+
+        /* FOOTER */
+        footer {
+            max-width: 1200px;
+            margin: 50px auto 0;
+            background-color: #713D16;
+            color: #FFFFFF;
+            padding: 36px 28px 20px;
+            border-radius: 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 24px;
+        }
+
+        .footer-about h2 {
+            margin-bottom: 12px;
+        }
+
+        .footer-about h2 span {
+            color: #FD9D24;
+        }
+
+        .footer-about p {
+            color: #FFF4E5;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .footer-links h3 {
+            font-size: 15px;
+            color: #FFFFFF;
+            margin-bottom: 14px;
+        }
+
+        .footer-links a,
+        .footer-links p {
+            display: block;
+            color: #FFF4E5;
+            font-size: 13px;
+            margin-bottom: 10px;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: #FD9D24;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid #A94E00;
+            margin-top: 28px;
+            padding-top: 18px;
+        }
+
+        .footer-bottom h3 {
+            margin-bottom: 8px;
+        }
+
+        .footer-bottom p {
+            color: #FD9D24;
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+
+        .footer-bottom small {
+            display: block;
+            color: #FFE5C2;
+            margin-top: 14px;
+        }
+
+        /* RESPONSIVENESS */
+        @media (max-width: 900px) {
+            .page-wrapper {
+                flex-direction: column;
+            }
+
+            .card-container {
+                width: 100%;
+            }
+
+            .pledge-container {
+                width: 100%;
+            }
+
+            .organization-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+
+            .pledge-container {
+                padding: 18px;
+            }
+
+            .pledge-card {
+                padding: 18px;
+            }
+
+            .pledge-item {
+                flex-direction: column;
+            }
+
+            .pledge-sign {
+                flex-direction: column;
+            }
+
+            .pledge-sign input {
+                width: 100%;
+            }
+
+            .organization-list {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>Trash<span>Stalk</span></h1>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="problem.html">The Problem</a>
+            <a href="solutions.html">Solutions</a>
+            <a href="get-involved.html">Get Involved</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="page-wrapper">
+
+            <!-- CONTACT SECTION -->
+            <section class="card-container" id="contact">
+
+                <h1 class="contact-title">Contact Us</h1>
+
+                <input type="radio" name="slider" id="btn-contact" checked>
+                <input type="radio" name="slider" id="btn-map">
+
+                <div class="tabs">
+
+                    <label for="btn-contact" class="tab-icon">
+                        <i class="fas fa-envelope"></i>
+                    </label>
+
+                    <label for="btn-map" class="tab-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </label>
+
+                </div>
+
+                <div class="slider-window">
+
+                    <div class="slider-track">
+
+                        <!-- CONTACT FORM -->
+                        <div class="slide">
+
+                            <h2>Get in Touch</h2>
+
+                            <p>
+                                Have questions or suggestions?
+                                Send us a message!
+                            </p>
+
+                            <form action="mailto:trashstalk@example.com"
+                                method="post"
+                                enctype="text/plain">
+
+                                <label for="name">Your Name</label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="Name"
+                                    placeholder="Enter your name"
+                                    required
+                                >
+
+                                <label for="email">Email Address</label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="Email"
+                                    placeholder="Enter your email"
+                                    required
+                                >
+
+                                <label for="subject">Subject</label>
+                                <input
+                                    type="text"
+                                    id="subject"
+                                    name="Subject"
+                                    placeholder="Message subject"
+                                    required
+                                >
+
+                                <label for="message">Your Message</label>
+                                <textarea
+                                    id="message"
+                                    name="Message"
+                                    rows="4"
+                                    placeholder="Write your message..."
+                                    required
+                                ></textarea>
+
+                                <button type="submit" class="submit-btn">
+                                    Send Message
+                                </button>
+
+                            </form>
+
+                        </div>
+
+                        <!-- MAP -->
+                        <div class="slide">
+
+                            <h2>Find Us Here</h2>
+
+                            <p>
+                                Visit us and learn more about our advocacy.
+                            </p>
+
+                            <div class="map-box">
+
+                                <div class="map-label">
+                                    <strong>TrashStalk</strong>
+                                    <span>Pamantasan ng Lungsod ng Maynila</span>
+                                </div>
+
+                                <iframe
+                                    src="https://maps.google.com/maps?q=Pamantasan%20ng%20Lungsod%20ng%20Maynila&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                                    loading="lazy"
+                                    allowfullscreen>
+                                </iframe>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- PLEDGE SECTION -->
+            <section class="pledge-container" id="pledge">
+
+                <h2 class="pledge-main-title">
+                    Make a Promise for a Cleaner Community
+                </h2>
+
+                <div class="pledge-card">
+
+                    <div class="pledge-list">
+
+                        <div class="pledge-item">
+
+                            <div class="pledge-icon">
+                                <i class="fas fa-trash-alt"></i>
+                            </div>
+
+                            <div class="pledge-text">
+                                <h3>Dispose of Waste Properly</h3>
+
+                                <p>
+                                    I promise to throw my garbage in the
+                                    proper bins and avoid littering.
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="pledge-item">
+
+                            <div class="pledge-icon">
+                                <i class="fas fa-recycle"></i>
+                            </div>
+
+                            <div class="pledge-text">
+                                <h3>Practice Waste Segregation</h3>
+
+                                <p>
+                                    I will separate biodegradable,
+                                    recyclable, and residual waste.
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="pledge-item">
+
+                            <div class="pledge-icon">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+
+                            <div class="pledge-text">
+                                <h3>Reduce Plastic Use</h3>
+
+                                <p>
+                                    I will use reusable bags, bottles,
+                                    and containers whenever possible.
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="pledge-item">
+
+                            <div class="pledge-icon">
+                                <i class="fas fa-hands-helping"></i>
+                            </div>
+
+                            <div class="pledge-text">
+                                <h3>Encourage Others</h3>
+
+                                <p>
+                                    I will encourage my family and community
+                                    to keep our surroundings clean.
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="pledge-item">
+
+                            <div class="pledge-icon">
+                                <i class="fas fa-water"></i>
+                            </div>
+
+                            <div class="pledge-text">
+                                <h3>Protect Our Waterways</h3>
+
+                                <p>
+                                    I will help prevent garbage from reaching
+                                    canals, rivers, and drainage systems.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- PLEDGE NAME INPUT -->
+                    <div class="pledge-sign">
+
+                        <input
+                            type="text"
+                            id="pledgeName"
+                            name="pledgeName"
+                            placeholder="Enter your full name"
+                        >
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+        <!-- ENVIRONMENTAL ORGANIZATIONS -->
+        <section class="organizations" id="organizations">
+
+            <h1>Environmental Organizations</h1>
+
+            <p class="section-description">
+                Discover organizations that work to protect the environment
+                and promote proper waste management.
+            </p>
+
+            <div class="organization-list">
+
+                <!-- DENR -->
+                <div class="organization-card">
+
+                    <div class="organization-heading denr">
+                        <i class="fas fa-tree fa-2x"></i>
+                        <h3>DENR</h3>
+                    </div>
+
+                    <div class="organization-info">
+
+                        <small>Government Agency</small>
+
+                        <h3>
+                            Department of Environment and Natural Resources
+                        </h3>
+
+                        <p>
+                            Works to protect the environment and manage
+                            the country's natural resources.
+                        </p>
+
+                        <a href="https://www.denr.gov.ph/" target="_blank">
+                            Visit Website
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- WWF -->
+                <div class="organization-card">
+
+                    <div class="organization-heading wwf">
+                        <i class="fas fa-paw fa-2x"></i>
+                        <h3>WWF</h3>
+                    </div>
+
+                    <div class="organization-info">
+
+                        <small>Environmental Organization</small>
+
+                        <h3>World Wide Fund for Nature</h3>
+
+                        <p>
+                            Promotes nature conservation and works to protect
+                            wildlife and the environment.
+                        </p>
+
+                        <a href="https://www.wwf.org.ph/" target="_blank">
+                            Visit Website
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- GREENPEACE -->
+                <div class="organization-card">
+
+                    <div class="organization-heading greenpeace">
+                        <i class="fas fa-globe fa-2x"></i>
+                        <h3>Greenpeace</h3>
+                    </div>
+
+                    <div class="organization-info">
+
+                        <small>Environmental Movement</small>
+
+                        <h3>Greenpeace Philippines</h3>
+
+                        <p>
+                            Campaigns for environmental protection and
+                            solutions to environmental problems.
+                        </p>
+
+                        <a href="https://www.greenpeace.org/philippines/" target="_blank">
+                            Visit Website
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- MOTHER EARTH FOUNDATION -->
+                <div class="organization-card">
+
+                    <div class="organization-heading mother-earth">
+                        <i class="fas fa-seedling fa-2x"></i>
+                        <h3>Mother Earth</h3>
+                    </div>
+
+                    <div class="organization-info">
+
+                        <small>Environmental NGO</small>
+
+                        <h3>Mother Earth Foundation</h3>
+
+                        <p>
+                            Promotes zero-waste practices and sustainable
+                            waste management in communities.
+                        </p>
+
+                        <a href="https://www.motherearthphil.org/" target="_blank">
+                            Visit Website
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-content">
+
+            <div class="footer-about">
+
+                <h2>Trash<span>Stalk</span></h2>
+
+                <p>
+                    TrashStalk promotes proper waste management and
+                    environmental awareness. Together, we can build
+                    cleaner and safer communities.
+                </p>
+
+            </div>
+
+            <div class="footer-links">
+
+                <h3>Quick Links</h3>
+
+                <a href="index.html">Home</a>
+                <a href="problem.html">The Problem</a>
+                <a href="solutions.html">Solutions</a>
+                <a href="get-involved.html">Get Involved</a>
+
+            </div>
+
+            <div class="footer-links">
+
+                <h3>Explore</h3>
+
+                <a href="#pledge">Take the Pledge</a>
+                <a href="#organizations">Organizations</a>
+                <a href="#contact">Contact Us</a>
+
+            </div>
+
+            <div class="footer-links">
+
+                <h3>Contact</h3>
+
+                <p>Pamantasan ng Lungsod ng Maynila</p>
+                <p>Intramuros, Manila, Philippines</p>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <h3>TrashStalk | A Cleaner Future</h3>
+
+            <p>Small Actions. Big Changes.</p>
+
+            <small>
+                © 2026 TrashStalk. All Rights Reserved.
+            </small>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>

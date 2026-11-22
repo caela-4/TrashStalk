@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>TrashStalk | Get Involved</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -72,6 +73,7 @@
             margin-top: 30px;
         }
 
+        /* CONTACT SECTION */
         .card-container {
             width: 360px;
             flex-shrink: 0;
@@ -202,6 +204,7 @@
             background-color: #D96F0B;
         }
 
+        /* MAP */
         .map-box {
             margin-top: 15px;
             height: 270px;
@@ -240,33 +243,7 @@
             margin-top: 4px;
         }
 
-        .socials {
-            background-color: #FFFFFF;
-            margin-top: 16px;
-            padding: 14px;
-            border-radius: 18px;
-            border: 1px solid #FFE5C2;
-            display: flex;
-            justify-content: space-around;
-        }
-
-        .socials a {
-            width: 30px;
-            height: 30px;
-            background-color: #FD9D24;
-            color: #FFFFFF;
-            border-radius: 6px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-decoration: none;
-            font-size: 14px;
-        }
-
-        .socials a:hover {
-            background-color: #D96F0B;
-        }
-
+        /* PLEDGE SECTION */
         .pledge-container {
             flex: 1;
             background-color: #FFF8EF;
@@ -360,22 +337,7 @@
             border-color: #FD9D24;
         }
 
-        .pledge-btn {
-            padding: 10px 26px;
-            background-color: #FD9D24;
-            color: #FFFFFF;
-            border: none;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.25s ease;
-        }
-
-        .pledge-btn:hover {
-            background-color: #D96F0B;
-        }
-
+        /* ORGANIZATIONS */
         .organizations {
             margin-top: 50px;
             background-color: #FFFFFF;
@@ -484,6 +446,7 @@
             color: #FFFFFF;
         }
 
+        /* FOOTER */
         footer {
             max-width: 1200px;
             margin: 50px auto 0;
@@ -609,8 +572,7 @@
                 flex-direction: column;
             }
 
-            .pledge-sign input,
-            .pledge-btn {
+            .pledge-sign input {
                 width: 100%;
             }
 
@@ -627,6 +589,7 @@
 
 <body>
 
+    <!-- HEADER -->
     <header>
         <h1>Trash<span>Stalk</span></h1>
 
@@ -643,7 +606,7 @@
         <div class="page-wrapper">
 
             <!-- CONTACT SECTION -->
-            <section class="card-container">
+            <section class="card-container" id="contact">
 
                 <h1 class="contact-title">Contact Us</h1>
 
@@ -651,6 +614,7 @@
                 <input type="radio" name="slider" id="btn-map">
 
                 <div class="tabs">
+
                     <label for="btn-contact" class="tab-icon">
                         <i class="fas fa-envelope"></i>
                     </label>
@@ -658,82 +622,104 @@
                     <label for="btn-map" class="tab-icon">
                         <i class="fas fa-map-marker-alt"></i>
                     </label>
+
                 </div>
 
                 <div class="slider-window">
+
                     <div class="slider-track">
 
                         <!-- CONTACT FORM -->
                         <div class="slide">
-                            <h2>Get in Touch</h2>
-                            <p>Have questions or suggestions? Send us a message!</p>
 
-                            <form action="mailto:trashstalk@example.com" method="post" enctype="text/plain">
+                            <h2>Get in Touch</h2>
+
+                            <p>
+                                Have questions or suggestions?
+                                Send us a message!
+                            </p>
+
+                            <form action="mailto:trashstalk@example.com"
+                                method="post"
+                                enctype="text/plain">
 
                                 <label for="name">Your Name</label>
-                                <input type="text" id="name" name="Name" placeholder="Enter your name" required>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="Name"
+                                    placeholder="Enter your name"
+                                    required
+                                >
 
                                 <label for="email">Email Address</label>
-                                <input type="email" id="email" name="Email" placeholder="Enter your email" required>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="Email"
+                                    placeholder="Enter your email"
+                                    required
+                                >
 
                                 <label for="subject">Subject</label>
-                                <input type="text" id="subject" name="Subject" placeholder="Message subject" required>
+                                <input
+                                    type="text"
+                                    id="subject"
+                                    name="Subject"
+                                    placeholder="Message subject"
+                                    required
+                                >
 
                                 <label for="message">Your Message</label>
-                                <textarea id="message" name="Message" rows="4" placeholder="Write your message..." required></textarea>
+                                <textarea
+                                    id="message"
+                                    name="Message"
+                                    rows="4"
+                                    placeholder="Write your message..."
+                                    required
+                                ></textarea>
 
-                                <button type="submit" class="submit-btn">Send Message</button>
+                                <button type="submit" class="submit-btn">
+                                    Send Message
+                                </button>
 
                             </form>
+
                         </div>
 
                         <!-- MAP -->
                         <div class="slide">
+
                             <h2>Find Us Here</h2>
-                            <p>Visit us and learn more about our advocacy.</p>
+
+                            <p>
+                                Visit us and learn more about our advocacy.
+                            </p>
 
                             <div class="map-box">
 
                                 <div class="map-label">
                                     <strong>TrashStalk</strong>
-                                    <span>Philippines</span>
+                                    <span>Pamantasan ng Lungsod ng Maynila</span>
                                 </div>
 
                                 <iframe
-                                    src="https://maps.google.com/maps?q=Manila%20City%20Philippines&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                    src="https://maps.google.com/maps?q=Pamantasan%20ng%20Lungsod%20ng%20Maynila&t=&z=15&ie=UTF8&iwloc=&output=embed"
                                     loading="lazy"
                                     allowfullscreen>
                                 </iframe>
 
                             </div>
+
                         </div>
 
                     </div>
                 </div>
 
-                <!-- SOCIAL LINKS -->
-                <div class="socials">
-                    <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-
-                    <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-
-                    <a href="https://www.twitter.com/" target="_blank" aria-label="Twitter">
-                        <i class="fab fa-x-twitter"></i>
-                    </a>
-
-                    <a href="https://www.youtube.com/" target="_blank" aria-label="YouTube">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </div>
-
             </section>
 
             <!-- PLEDGE SECTION -->
-            <section class="pledge-container">
+            <section class="pledge-container" id="pledge">
 
                 <h2 class="pledge-main-title">
                     Make a Promise for a Cleaner Community
@@ -744,145 +730,234 @@
                     <div class="pledge-list">
 
                         <div class="pledge-item">
+
                             <div class="pledge-icon">
                                 <i class="fas fa-trash-alt"></i>
                             </div>
 
                             <div class="pledge-text">
                                 <h3>Dispose of Waste Properly</h3>
-                                <p>I promise to throw my garbage in the proper bins and avoid littering.</p>
+
+                                <p>
+                                    I promise to throw my garbage in the
+                                    proper bins and avoid littering.
+                                </p>
                             </div>
+
                         </div>
 
                         <div class="pledge-item">
+
                             <div class="pledge-icon">
                                 <i class="fas fa-recycle"></i>
                             </div>
 
                             <div class="pledge-text">
                                 <h3>Practice Waste Segregation</h3>
-                                <p>I will separate biodegradable, recyclable, and residual waste.</p>
+
+                                <p>
+                                    I will separate biodegradable,
+                                    recyclable, and residual waste.
+                                </p>
                             </div>
+
                         </div>
 
                         <div class="pledge-item">
+
                             <div class="pledge-icon">
                                 <i class="fas fa-leaf"></i>
                             </div>
 
                             <div class="pledge-text">
                                 <h3>Reduce Plastic Use</h3>
-                                <p>I will use reusable bags, bottles, and containers whenever possible.</p>
+
+                                <p>
+                                    I will use reusable bags, bottles,
+                                    and containers whenever possible.
+                                </p>
                             </div>
+
                         </div>
 
                         <div class="pledge-item">
+
                             <div class="pledge-icon">
                                 <i class="fas fa-hands-helping"></i>
                             </div>
 
                             <div class="pledge-text">
                                 <h3>Encourage Others</h3>
-                                <p>I will encourage my family and community to keep our surroundings clean.</p>
+
+                                <p>
+                                    I will encourage my family and community
+                                    to keep our surroundings clean.
+                                </p>
                             </div>
+
                         </div>
 
                         <div class="pledge-item">
+
                             <div class="pledge-icon">
                                 <i class="fas fa-water"></i>
                             </div>
 
                             <div class="pledge-text">
                                 <h3>Protect Our Waterways</h3>
-                                <p>I will help prevent garbage from reaching canals, rivers, and drainage systems.</p>
+
+                                <p>
+                                    I will help prevent garbage from reaching
+                                    canals, rivers, and drainage systems.
+                                </p>
                             </div>
+
                         </div>
 
                     </div>
 
+                    <!-- PLEDGE NAME INPUT -->
                     <div class="pledge-sign">
-                        <input type="text" id="pledgeName" placeholder="Enter your full name">
 
-                        <button class="pledge-btn" onclick="makePledge()">
-                            Take the Pledge
-                        </button>
+                        <input
+                            type="text"
+                            id="pledgeName"
+                            name="pledgeName"
+                            placeholder="Enter your full name"
+                        >
+
                     </div>
 
-                    <p id="pledgeMessage" style="margin-top: 15px; text-align: center; color: #A94E00; font-weight: bold;"></p>
-
                 </div>
+
             </section>
 
         </div>
 
-        <!-- ORGANIZATIONS -->
-        <section class="organizations">
+        <!-- ENVIRONMENTAL ORGANIZATIONS -->
+        <section class="organizations" id="organizations">
 
             <h1>Environmental Organizations</h1>
 
             <p class="section-description">
-                Discover organizations that work to protect the environment and promote proper waste management.
+                Discover organizations that work to protect the environment
+                and promote proper waste management.
             </p>
 
             <div class="organization-list">
 
+                <!-- DENR -->
                 <div class="organization-card">
+
                     <div class="organization-heading denr">
                         <i class="fas fa-tree fa-2x"></i>
                         <h3>DENR</h3>
                     </div>
 
                     <div class="organization-info">
+
                         <small>Government Agency</small>
-                        <h3>Department of Environment and Natural Resources</h3>
-                        <p>Works to protect the environment and manage the country's natural resources.</p>
-                        <a href="https://www.denr.gov.ph/" target="_blank">Visit Website</a>
+
+                        <h3>
+                            Department of Environment and Natural Resources
+                        </h3>
+
+                        <p>
+                            Works to protect the environment and manage
+                            the country's natural resources.
+                        </p>
+
+                        <a href="https://www.denr.gov.ph/" target="_blank">
+                            Visit Website
+                        </a>
+
                     </div>
+
                 </div>
 
+                <!-- WWF -->
                 <div class="organization-card">
+
                     <div class="organization-heading wwf">
                         <i class="fas fa-paw fa-2x"></i>
                         <h3>WWF</h3>
                     </div>
 
                     <div class="organization-info">
+
                         <small>Environmental Organization</small>
+
                         <h3>World Wide Fund for Nature</h3>
-                        <p>Promotes nature conservation and works to protect wildlife and the environment.</p>
-                        <a href="https://www.wwf.org.ph/" target="_blank">Visit Website</a>
+
+                        <p>
+                            Promotes nature conservation and works to protect
+                            wildlife and the environment.
+                        </p>
+
+                        <a href="https://www.wwf.org.ph/" target="_blank">
+                            Visit Website
+                        </a>
+
                     </div>
+
                 </div>
 
+                <!-- GREENPEACE -->
                 <div class="organization-card">
+
                     <div class="organization-heading greenpeace">
                         <i class="fas fa-globe fa-2x"></i>
                         <h3>Greenpeace</h3>
                     </div>
 
                     <div class="organization-info">
+
                         <small>Environmental Movement</small>
+
                         <h3>Greenpeace Philippines</h3>
-                        <p>Campaigns for environmental protection and solutions to environmental problems.</p>
-                        <a href="https://www.greenpeace.org/philippines/" target="_blank">Visit Website</a>
+
+                        <p>
+                            Campaigns for environmental protection and
+                            solutions to environmental problems.
+                        </p>
+
+                        <a href="https://www.greenpeace.org/philippines/" target="_blank">
+                            Visit Website
+                        </a>
+
                     </div>
+
                 </div>
 
+                <!-- MOTHER EARTH FOUNDATION -->
                 <div class="organization-card">
+
                     <div class="organization-heading mother-earth">
                         <i class="fas fa-seedling fa-2x"></i>
                         <h3>Mother Earth</h3>
                     </div>
 
                     <div class="organization-info">
+
                         <small>Environmental NGO</small>
+
                         <h3>Mother Earth Foundation</h3>
-                        <p>Promotes zero-waste practices and sustainable waste management in communities.</p>
-                        <a href="https://www.motherearthphil.org/" target="_blank">Visit Website</a>
+
+                        <p>
+                            Promotes zero-waste practices and sustainable
+                            waste management in communities.
+                        </p>
+
+                        <a href="https://www.motherearthphil.org/" target="_blank">
+                            Visit Website
+                        </a>
+
                     </div>
+
                 </div>
 
             </div>
+
         </section>
 
     </main>
@@ -893,58 +968,62 @@
         <div class="footer-content">
 
             <div class="footer-about">
+
                 <h2>Trash<span>Stalk</span></h2>
+
                 <p>
-                    TrashStalk promotes proper waste management and environmental awareness.
-                    Together, we can build cleaner and safer communities.
+                    TrashStalk promotes proper waste management and
+                    environmental awareness. Together, we can build
+                    cleaner and safer communities.
                 </p>
+
             </div>
 
             <div class="footer-links">
+
                 <h3>Quick Links</h3>
+
                 <a href="index.html">Home</a>
                 <a href="problem.html">The Problem</a>
                 <a href="solutions.html">Solutions</a>
                 <a href="get-involved.html">Get Involved</a>
+
             </div>
 
             <div class="footer-links">
+
                 <h3>Explore</h3>
+
                 <a href="#pledge">Take the Pledge</a>
                 <a href="#organizations">Organizations</a>
                 <a href="#contact">Contact Us</a>
+
             </div>
 
             <div class="footer-links">
+
                 <h3>Contact</h3>
-                <p>Philippines</p>
-                <p>TrashStalk Advocacy</p>
+
+                <p>Pamantasan ng Lungsod ng Maynila</p>
+                <p>Intramuros, Manila, Philippines</p>
+
             </div>
 
         </div>
 
         <div class="footer-bottom">
+
             <h3>TrashStalk | A Cleaner Future</h3>
+
             <p>Small Actions. Big Changes.</p>
-            <small>© 2026 TrashStalk. All Rights Reserved.</small>
+
+            <small>
+                © 2026 TrashStalk. All Rights Reserved.
+            </small>
+
         </div>
 
     </footer>
-
-    <script>
-        function makePledge() {
-            const name = document.getElementById("pledgeName").value.trim();
-            const message = document.getElementById("pledgeMessage");
-
-            if (name === "") {
-                message.textContent = "Please enter your name first.";
-                return;
-            }
-
-            message.textContent = "Thank you, " + name + "! You have taken the pledge for a cleaner community.";
-            document.getElementById("pledgeName").value = "";
-        }
-    </script>
 
 </body>
 </html>
