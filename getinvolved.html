@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -117,8 +117,8 @@
             border: 1px solid #FFE5C2;
         }
 
-        #btn-contact:checked ~ .tabs label[for="btn-contact"],
-        #btn-map:checked ~ .tabs label[for="btn-map"] {
+        #btn-contact:checked~.tabs label[for="btn-contact"],
+        #btn-map:checked~.tabs label[for="btn-map"] {
             width: 80px;
             height: 80px;
             font-size: 30px;
@@ -138,11 +138,11 @@
             transition: transform 0.5s ease;
         }
 
-        #btn-contact:checked ~ .slider-window .slider-track {
+        #btn-contact:checked~.slider-window .slider-track {
             transform: translateX(0);
         }
 
-        #btn-map:checked ~ .slider-window .slider-track {
+        #btn-map:checked~.slider-window .slider-track {
             transform: translateX(-50%);
         }
 
@@ -346,7 +346,7 @@
             border: 1px solid #FFE5C2;
         }
 
-        .organizations > h1 {
+        .organizations>h1 {
             color: #713D16;
             font-size: 26px;
         }
@@ -585,20 +585,20 @@
             }
         }
     </style>
-<link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="shared.css">
 </head>
 
 <body class="ts-involved">
 
-<div class="ts-navbar" role="navigation" aria-label="Main navigation">
-  <a class="ts-logo" href="index.html">Trash<span>Stalk</span></a>
-  <div class="ts-links">
-    <a href="index.html" >Home</a>
-    <a href="issue.html" >The Problem</a>
-    <a href="solution.html" >Solutions</a>
-    <a href="contact.html" aria-current="page">Get Involved</a>
-  </div>
-</div>
+    <div class="ts-navbar" role="navigation" aria-label="Main navigation">
+        <a class="ts-logo" href="index.html">Trash<span>Stalk</span></a>
+        <div class="ts-links">
+            <a href="index.html">Home</a>
+            <a href="issue.html">The Problem</a>
+            <a href="solution.html">Solutions</a>
+            <a href="getinvolved.html" aria-current="page">Get Involved</a>
+        </div>
+    </div>
 
 
     <main>
@@ -637,45 +637,21 @@
                                 Send us a message!
                             </p>
 
-                            <form action="mailto:trashstalk@example.com"
-                                method="post"
-                                enctype="text/plain">
+                            <form action="https://api.web3forms.com/submit" method="POST">
+<input type="hidden" name="access_key" value="c761d548-f47e-4f67-9a6d-1a9cb1a3ffc9">
 
                                 <label for="name">Your Name</label>
-                                <input
-                                    type="text"
-                                    id="name"
-                                    name="Name"
-                                    placeholder="Enter your name"
-                                    required
-                                >
+                                <input type="text" id="name" name="Name" placeholder="Enter your name" required>
 
                                 <label for="email">Email Address</label>
-                                <input
-                                    type="email"
-                                    id="email"
-                                    name="Email"
-                                    placeholder="Enter your email"
-                                    required
-                                >
+                                <input type="email" id="email" name="Email" placeholder="Enter your email" required>
 
                                 <label for="subject">Subject</label>
-                                <input
-                                    type="text"
-                                    id="subject"
-                                    name="Subject"
-                                    placeholder="Message subject"
-                                    required
-                                >
+                                <input type="text" id="subject" name="Subject" placeholder="Message subject" required>
 
                                 <label for="message">Your Message</label>
-                                <textarea
-                                    id="message"
-                                    name="Message"
-                                    rows="4"
-                                    placeholder="Write your message..."
-                                    required
-                                ></textarea>
+                                <textarea id="message" name="Message" rows="4" placeholder="Write your message..."
+                                    required></textarea>
 
                                 <button type="submit" class="submit-btn">
                                     Send Message
@@ -702,8 +678,7 @@
 
                                 <iframe
                                     src="https://maps.google.com/maps?q=Pamantasan%20ng%20Lungsod%20ng%20Maynila&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                                    loading="lazy"
-                                    allowfullscreen>
+                                    loading="lazy" allowfullscreen>
                                 </iframe>
 
                             </div>
@@ -814,12 +789,7 @@
 
                     <div class="pledge-sign">
 
-                        <input
-                            type="text"
-                            id="pledgeName"
-                            name="pledgeName"
-                            placeholder="Enter your full name"
-                        >
+                        <input type="text" id="pledgeName" name="pledgeName" placeholder="Enter your full name">
 
                     </div>
 
@@ -975,7 +945,7 @@
                 <a href="index.html">Home</a>
                 <a href="issue.html">The Problem</a>
                 <a href="solution.html">Solutions</a>
-                <a href="contact.html">Get Involved</a>
+                <a href="getinvolved.html">Get Involved</a>
 
             </div>
 
@@ -1015,4 +985,5 @@
     </footer>
 
 </body>
+
 </html>

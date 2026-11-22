@@ -332,3 +332,6 @@ body.ts-home {
     justify-self: center;
   }
 }
+/* Shared navigation and problem-page spacing */
+.ts-problem .ts-navbar { margin-top: 0; }
+.ts-problem .ts-page-heading { padding-top: 12px; }
