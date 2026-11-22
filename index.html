@@ -1,16 +1,17 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Trash Stalk | UN SDG 11</title>
-    <!-- Google Fonts for crisp, student-friendly typography -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 
     <style>
-        /* Basic Reset and Box Sizing */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -19,8 +20,8 @@
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background-color: #f6f1ea; /* Warm light beige background */
-            color: #1f2937;
+            background-color: #FFF4E5;
+            color: #713D16;
             line-height: 1.65;
             min-height: 100vh;
             display: flex;
@@ -28,19 +29,19 @@
             justify-content: space-between;
         }
 
-        /* ================= REFINED UPPER HEADER SECTION ================= */
+        /* HEADER */
         .site-header {
-            background-color: #bc7a9b;
-            color: #1a0f14;
-            border-bottom: 2px solid #2d1b24;
+            background-color: #FD9D24;
+            color: #FFFFFF;
+            border-bottom: 2px solid #713D16;
             padding: 20px 28px 26px;
-            box-shadow: 0 3px 10px rgba(45, 27, 36, 0.08);
+            box-shadow: 0 3px 10px rgba(113, 61, 22, 0.08);
         }
 
         .header-frame {
             max-width: 1080px;
             margin: 0 auto;
-            border: 1.5px solid rgba(45, 27, 36, 0.25);
+            border: 1.5px solid rgba(113, 61, 22, 0.25);
             border-radius: 14px;
             background-color: rgba(255, 255, 255, 0.08);
             padding: 16px 24px 20px;
@@ -57,11 +58,11 @@
         .member-credits {
             font-size: 0.88rem;
             font-weight: 500;
-            color: #1a0f14;
-            background-color: rgba(246, 241, 234, 0.35);
+            color: #713D16;
+            background-color: rgba(255, 244, 229, 0.55);
             padding: 4px 12px;
             border-radius: 20px;
-            border: 1px solid rgba(45, 27, 36, 0.2);
+            border: 1px solid rgba(113, 61, 22, 0.2);
         }
 
         .main-title {
@@ -70,7 +71,7 @@
             font-size: 3.1rem;
             font-weight: 800;
             letter-spacing: -0.02em;
-            color: #160c11;
+            color: #713D16;
             line-height: 1.15;
             margin: 4px 0;
         }
@@ -83,14 +84,14 @@
         .group-badge {
             font-size: 0.92rem;
             font-weight: 600;
-            color: #1a0f14;
-            background-color: #edd0de;
-            border: 1.5px solid #2d1b24;
+            color: #713D16;
+            background-color: #FFF8EF;
+            border: 1.5px solid #713D16;
             border-radius: 8px;
             padding: 4px 14px;
         }
 
-        /* ================= MAIN CONTENT SECTION ================= */
+        /* MAIN CONTENT */
         .main-content {
             max-width: 1080px;
             width: 100%;
@@ -109,7 +110,6 @@
             width: 100%;
         }
 
-        /* Left Column: Text and Dashed Dividers */
         .text-column {
             display: flex;
             flex-direction: column;
@@ -118,7 +118,7 @@
 
         .dashed-divider {
             border: none;
-            border-top: 2px dashed #4b3842;
+            border-top: 2px dashed #D96F0B;
             width: 85%;
             margin: 0;
         }
@@ -131,13 +131,13 @@
             font-family: 'Poppins', sans-serif;
             font-size: 1.85rem;
             font-weight: 700;
-            color: #160c11;
+            color: #713D16;
             margin-bottom: 16px;
         }
 
         .text-body p {
             font-size: 0.98rem;
-            color: #292226;
+            color: #713D16;
             margin-bottom: 16px;
             text-align: left;
         }
@@ -146,7 +146,7 @@
             margin-bottom: 0;
         }
 
-        /* Right Column: 3-Image Collage */
+        /* IMAGE COLLAGE */
         .media-collage {
             display: flex;
             flex-direction: column;
@@ -159,18 +159,18 @@
             gap: 16px;
         }
 
-        /* SDG 11 Orange Card */
+        /* SDG 11 CARD */
         .sdg-card {
-            background-color: #fd9d24;
-            color: #ffffff;
-            border: 1.5px solid rgba(45, 27, 36, 0.18);
+            background-color: #FD9D24;
+            color: #FFFFFF;
+            border: 1.5px solid rgba(113, 61, 22, 0.18);
             border-radius: 12px;
             padding: 18px;
             aspect-ratio: 1 / 1;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            box-shadow: 0 5px 14px rgba(45, 27, 36, 0.08);
+            box-shadow: 0 5px 14px rgba(113, 61, 22, 0.08);
         }
 
         .sdg-header {
@@ -200,13 +200,13 @@
             margin-top: 8px;
         }
 
-        /* Photo Containers */
+        /* PHOTO CONTAINERS */
         .photo-card {
-            border: 1.5px solid rgba(45, 27, 36, 0.18);
+            border: 1.5px solid rgba(113, 61, 22, 0.18);
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 5px 14px rgba(45, 27, 36, 0.08);
-            background-color: #e8dfd3;
+            box-shadow: 0 5px 14px rgba(113, 61, 22, 0.08);
+            background-color: #FFE5C2;
         }
 
         .photo-card img {
@@ -224,19 +224,20 @@
             height: 210px;
         }
 
-        /* ================= REFINED STRAIGHT-EDGED FOOTER SECTION ================= */
+        /* FOOTER */
         .site-footer {
-            background-color: #bc7a9b;
-            border-top: 2px solid #2d1b24;
+            background-color: #FD9D24;
+            color: #713D16;
+            border-top: 2px solid #713D16;
             padding: 24px 28px 26px;
             margin-top: 12px;
-            box-shadow: 0 -3px 10px rgba(45, 27, 36, 0.08);
+            box-shadow: 0 -3px 10px rgba(113, 61, 22, 0.08);
         }
 
         .footer-frame {
             max-width: 1080px;
             margin: 0 auto;
-            border: 1.5px solid rgba(45, 27, 36, 0.25);
+            border: 1.5px solid rgba(113, 61, 22, 0.25);
             border-radius: 14px;
             background-color: rgba(255, 255, 255, 0.08);
             padding: 20px 24px 18px;
@@ -259,33 +260,32 @@
             text-decoration: none;
             font-size: 0.88rem;
             font-weight: 600;
-            color: #1a0f14;
-            background-color: #c98eab;
-            border: 1.5px solid #2d1b24;
+            color: #713D16;
+            background-color: #FFE5C2;
+            border: 1.5px solid #713D16;
             border-radius: 10px;
             padding: 11px 18px;
             cursor: default;
         }
 
-        /* Active Page Pill Styling (Page 1) */
         .nav-pill.active {
-            background-color: #edd0de;
+            background-color: #FFF8EF;
             font-weight: 700;
-            box-shadow: 0 2px 6px rgba(45, 27, 36, 0.14);
+            box-shadow: 0 2px 6px rgba(113, 61, 22, 0.14);
         }
 
         .footer-note {
             font-size: 0.8rem;
             font-weight: 500;
-            color: #24131b;
+            color: #713D16;
             text-align: center;
-            border-top: 1px solid rgba(45, 27, 36, 0.25);
+            border-top: 1px solid rgba(113, 61, 22, 0.25);
             padding-top: 14px;
             width: 100%;
             max-width: 680px;
         }
 
-        /* ================= RESPONSIVE DESIGN ================= */
+        /* RESPONSIVE DESIGN */
         @media (max-width: 850px) {
             .content-grid {
                 grid-template-columns: 1fr;
@@ -327,119 +327,167 @@
         }
     </style>
 </head>
+
 <body>
 
-    <!-- REFINED UPPER HEADER BANNER -->
+    <!-- HEADER -->
     <header class="site-header">
         <div class="header-frame">
+
             <div class="header-top-row">
-                <span class="member-credits">Balmeo, Barrieses, Belandres, Quinto</span>
+                <span class="member-credits">
+                    Balmeo, Barrieses, Belandres, Quinto
+                </span>
             </div>
+
             <h1 class="main-title">Trash Stalk</h1>
+
             <div class="header-bottom-row">
                 <span class="group-badge">By: Group 4</span>
             </div>
+
         </div>
     </header>
 
-    <!-- MAIN CONTENT ON WARM LIGHT BEIGE -->
+    <!-- MAIN CONTENT -->
     <main class="main-content">
         <div class="content-grid">
 
-            <!-- Left Column: Introductory Text -->
+            <!-- LEFT COLUMN -->
             <section class="text-column">
+
                 <hr class="dashed-divider">
 
                 <div class="text-body">
+
                     <h2 class="section-heading">What is SDG 11?</h2>
+
                     <p>
                         SDG 11, also known as the “Sustainable Cities and Communities” Development Goal, is a goal created by the United Nations, aiming to transform cities into safer, more sustainable habitats by reducing urban hazards, optimizing resource efficiency, and ensuring resilient infrastructure for every resident.
                     </p>
+
                     <p>
                         As time goes by, the Philippines' dire need of assistance when it comes to creating thriving, livable cities increases. And because of that, we, Group 5, have developed a plan that can effectively help in that area, particularly towards garbage management and the cleaning of our streets. First, let us identify the problem at hand.
                     </p>
+
                 </div>
 
                 <hr class="dashed-divider">
+
             </section>
 
-            <!-- Right Column: 3-Image Collage -->
+            <!-- RIGHT COLUMN: IMAGE COLLAGE -->
             <section class="media-collage" aria-label="SDG 11 Visual Collage">
+
                 <div class="top-media-row">
-                    <!-- Top-Left: UN SDG 11 Graphic -->
+
+                    <!-- SDG 11 CARD -->
                     <div class="sdg-card">
+
                         <div class="sdg-header">
                             <span class="sdg-number">11</span>
+
                             <div class="sdg-label">
-                                Sustainable Cities<br>and Communities
+                                Sustainable Cities<br>
+                                and Communities
                             </div>
                         </div>
+
                         <svg class="sdg-svg" viewBox="0 0 220 115" fill="currentColor" aria-label="Sustainable Cities Skyline Icon">
-                            <!-- Left House -->
+
                             <polygon points="10,65 30,45 50,65" />
                             <rect x="14" y="65" width="32" height="44" />
-                            <rect x="25" y="85" width="10" height="24" fill="#fd9d24" />
-                            <!-- Center Tall Building -->
+                            <rect x="25" y="85" width="10" height="24" fill="#FD9D24" />
+
                             <rect x="58" y="18" width="44" height="91" />
-                            <rect x="66" y="28" width="9" height="11" fill="#fd9d24" />
-                            <rect x="85" y="28" width="9" height="11" fill="#fd9d24" />
-                            <rect x="66" y="46" width="9" height="11" fill="#fd9d24" />
-                            <rect x="85" y="46" width="9" height="11" fill="#fd9d24" />
-                            <rect x="66" y="64" width="9" height="11" fill="#fd9d24" />
-                            <rect x="85" y="64" width="9" height="11" fill="#fd9d24" />
-                            <rect x="66" y="82" width="9" height="11" fill="#fd9d24" />
-                            <rect x="85" y="82" width="9" height="11" fill="#fd9d24" />
-                            <!-- Slanted Eco Building -->
+                            <rect x="66" y="28" width="9" height="11" fill="#FD9D24" />
+                            <rect x="85" y="28" width="9" height="11" fill="#FD9D24" />
+                            <rect x="66" y="46" width="9" height="11" fill="#FD9D24" />
+                            <rect x="85" y="46" width="9" height="11" fill="#FD9D24" />
+                            <rect x="66" y="64" width="9" height="11" fill="#FD9D24" />
+                            <rect x="85" y="64" width="9" height="11" fill="#FD9D24" />
+                            <rect x="66" y="82" width="9" height="11" fill="#FD9D24" />
+                            <rect x="85" y="82" width="9" height="11" fill="#FD9D24" />
+
                             <polygon points="110,54 154,26 154,109 110,109" />
-                            <rect x="120" y="60" width="10" height="10" fill="#fd9d24" />
-                            <rect x="136" y="50" width="10" height="10" fill="#fd9d24" />
-                            <rect x="120" y="77" width="10" height="10" fill="#fd9d24" />
-                            <rect x="136" y="77" width="10" height="10" fill="#fd9d24" />
-                            <rect x="120" y="94" width="10" height="15" fill="#fd9d24" />
-                            <rect x="136" y="94" width="10" height="15" fill="#fd9d24" />
-                            <!-- Right Building -->
+                            <rect x="120" y="60" width="10" height="10" fill="#FD9D24" />
+                            <rect x="136" y="50" width="10" height="10" fill="#FD9D24" />
+                            <rect x="120" y="77" width="10" height="10" fill="#FD9D24" />
+                            <rect x="136" y="77" width="10" height="10" fill="#FD9D24" />
+                            <rect x="120" y="94" width="10" height="15" fill="#FD9D24" />
+                            <rect x="136" y="94" width="10" height="15" fill="#FD9D24" />
+
                             <rect x="162" y="60" width="46" height="49" />
-                            <rect x="170" y="70" width="11" height="10" fill="#fd9d24" />
-                            <rect x="189" y="70" width="11" height="10" fill="#fd9d24" />
-                            <rect x="170" y="87" width="11" height="10" fill="#fd9d24" />
-                            <rect x="189" y="87" width="11" height="10" fill="#fd9d24" />
+                            <rect x="170" y="70" width="11" height="10" fill="#FD9D24" />
+                            <rect x="189" y="70" width="11" height="10" fill="#FD9D24" />
+                            <rect x="170" y="87" width="11" height="10" fill="#FD9D24" />
+                            <rect x="189" y="87" width="11" height="10" fill="#FD9D24" />
+
                         </svg>
+
                     </div>
 
-                    <!-- Top-Right: Clean Rizal Park (Luneta Park) Photograph -->
+                    <!-- RIZAL MONUMENT PHOTO -->
                     <div class="photo-card top-photo">
+
                         <img
                             src="https://commons.wikimedia.org/wiki/Special:FilePath/Rizal_Monument_(Manila,_2024).jpg?width=800"
-                            onerror="this.onerror=null;this.src='https://placehold.co/600x480/bc7a9b/ffffff?text=Rizal+Park,+Manila';"
-                            alt="Rizal Monument at Rizal Park (Luneta Park) in Manila, Philippines on a sunny day"
+                            onerror="this.onerror=null;this.src='https://placehold.co/600x480/FFF4E5/713D16?text=Rizal+Park,+Manila';"
+                            alt="Rizal Monument at Rizal Park in Manila, Philippines"
                         >
+
                     </div>
+
                 </div>
 
-                <!-- Bottom Wide Image: Sustainable City with Trees & Solar Panels -->
+                <!-- BOTTOM PHOTO -->
                 <div class="photo-card bottom-photo">
+
                     <img
                         src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1200&q=80"
                         onerror="this.onerror=null;this.src='https://placehold.co/1000x450/4b7f52/ffffff?text=Sustainable+Green+City';"
                         alt="Sustainable city buildings with trees and solar panels"
                     >
+
                 </div>
+
             </section>
 
         </div>
     </main>
 
-    <!-- REFINED STRAIGHT-EDGED FOOTER NAVIGATION -->
+    <!-- FOOTER NAVIGATION -->
     <footer class="site-footer">
+
         <div class="footer-frame">
+
             <nav class="footer-nav" aria-label="Page Navigation">
-                <a href="/index.html" class="nav-pill active">[Page 1: The Introduction]</a>
-                <a href="/issue.html" class="nav-pill">[Page 2: The Problem]</a>
-                <a href="/solution.html" class="nav-pill">[Page 3: The Solution]</a>
-                <a href="/contact.html" class="nav-pill">[Page 4: The Way To Get Involved]</a>
+
+                <a href="/index.html" class="nav-pill active">
+                    [Page 1: The Introduction]
+                </a>
+
+                <a href="/issue.html" class="nav-pill">
+                    [Page 2: The Problem]
+                </a>
+
+                <a href="/solution.html" class="nav-pill">
+                    [Page 3: The Solution]
+                </a>
+
+                <a href="/contact.html" class="nav-pill">
+                    [Page 4: The Way To Get Involved]
+                </a>
+
             </nav>
-            <p class="footer-note">Trash Stalk &bull; UN Sustainable Development Goal 11: Sustainable Cities and Communities</p>
+
+            <p class="footer-note">
+                Trash Stalk &bull; UN Sustainable Development Goal 11:
+                Sustainable Cities and Communities
+            </p>
+
         </div>
+
     </footer>
 
 </body>
