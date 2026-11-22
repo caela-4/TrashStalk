@@ -127,8 +127,9 @@
 
         .slide {
             width: 50%;
+            min-width: 50%;
             flex-shrink: 0;
-            padding: 40px 22px 25px;
+            padding: 30px 22px 25px;
         }
 
         .slide h2 {
@@ -310,10 +311,9 @@
             border-top: 2px dashed #FD9D24;
             display: flex;
             gap: 12px;
-            align-items: center;
         }
 
-        .pledge-sign input[type="text"] {
+        .pledge-sign input {
             flex: 1;
             border: 1px solid #E6C7AE;
             border-radius: 20px;
@@ -323,11 +323,21 @@
             outline: none;
         }
 
-        .pledge-sign input:focus {
-            border-color: #FD9D24;
+        .pledge-btn {
+            padding: 10px 26px;
+            background-color: #FD9D24;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
         }
 
-        /* ORGANIZATIONS */
+        .pledge-btn:hover {
+            background-color: #D96F0B;
+        }
+
         .organizations {
             margin-top: 50px;
             background-color: #FFFFFF;
@@ -632,20 +642,11 @@
 
                     </div>
 
-                    <!-- PLEDGE NAME INPUT -->
                     <div class="pledge-sign">
-
-                        <input
-                            type="text"
-                            id="pledgeName"
-                            name="pledgeName"
-                            placeholder="Enter your full name"
-                        >
-
+                        <input type="text" id="pledgeName" placeholder="Enter your full name">
+                        <button type="button" class="pledge-btn">Take the Pledge</button>
                     </div>
-
                 </div>
-
             </section>
 
         </div>
