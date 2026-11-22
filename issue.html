@@ -125,20 +125,66 @@
             font-weight: bold;
         }
 
-        footer {
-            text-align: center;
-            background: #713D16;
-            color: white;
-            padding: 25px;
-            border-radius: 14px;
+        /* FOOTER DESIGN */
+
+        .site-footer {
+            background: #FFA32F;
+            border: 1px solid #DF8D24;
+            border-radius: 15px;
+            padding: 20px;
             margin-top: 40px;
-            border-bottom: 5px solid #FD9D24;
+            text-align: center;
+            border-bottom: none;
         }
 
-        footer p {
-            text-align: center;
-            margin: 5px 0;
+        .footer-frame {
+            width: 100%;
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .nav-pill {
+            display: inline-block;
+            background: #FFF4E7;
+            color: #713B1C;
+            text-decoration: none;
+            border: 1px solid #713B1C;
+            border-radius: 11px;
+            padding: 10px 18px;
+            font-size: 11px;
+            transition: 0.3s ease;
+        }
+
+        .nav-pill:hover {
+            background: #713B1C;
             color: white;
+            transform: translateY(-2px);
+        }
+
+        .nav-pill.active {
+            background: #FFF4E7;
+            color: #713B1C;
+        }
+
+        .footer-frame::after {
+            content: "";
+            display: block;
+            width: 65%;
+            border-top: 1px solid #D98C2B;
+            margin: 16px auto 10px;
+        }
+
+        .footer-note {
+            color: #713B1C;
+            font-size: 10px;
+            text-align: center;
+            margin: 0;
         }
 
         /* MOBILE RESPONSIVENESS */
@@ -159,6 +205,19 @@
 
             header h2 {
                 font-size: 19px;
+            }
+
+            .footer-nav {
+                gap: 10px;
+            }
+
+            .nav-pill {
+                font-size: 10px;
+                padding: 10px 12px;
+            }
+
+            .footer-frame::after {
+                width: 90%;
             }
 
         }
@@ -292,7 +351,7 @@
 
     </section>
 
-    <!-- FOOTER -->
+    <!-- FOOTER NAVIGATION -->
 
     <footer class="site-footer">
 
@@ -300,11 +359,11 @@
 
             <nav class="footer-nav" aria-label="Page Navigation">
 
-                <a href="/index.html" class="nav-pill active">
+                <a href="/index.html" class="nav-pill">
                     [Page 1: The Introduction]
                 </a>
 
-                <a href="/issue.html" class="nav-pill">
+                <a href="/issue.html" class="nav-pill active">
                     [Page 2: The Problem]
                 </a>
 
