@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap');
+
+:root {
+  --ts-cream: #FFF4E5;
+  --ts-orange: #FD9D24;
+  --ts-brown: #713D16;
+  --ts-border: #FFE5C2;
+}
+
+body {
+  background: var(--ts-cream);
+  color: var(--ts-brown);
+}
+
+.ts-navbar {
+  width: calc(100% - 48px);
+  max-width: 1200px;
+  margin: 35px auto 30px;
+  padding: 18px 25px;
+  background: white;
+  border: 1px solid var(--ts-border);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.ts-navbar .ts-logo {
+  color: var(--ts-brown);
+  font-family: 'Poppins', sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.ts-navbar .ts-logo span {
+  color: var(--ts-orange);
+}
+
+.ts-navbar .ts-links {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.ts-navbar .ts-links a {
+  margin: 0;
+  color: var(--ts-brown);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.ts-navbar .ts-links a:hover,
+.ts-navbar .ts-links a[aria-current="page"] {
+  color: #E87800;
+}
+
+.ts-page-heading {
+  max-width: 1200px;
+  margin: 0 auto 20px;
+  padding: 0 24px;
+}
+
+.ts-page-heading h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(28px, 4vw, 42px);
+  margin: 0 0 8px;
+}
+
+.ts-page-heading p {
+  font-family: Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.ts-page-heading--with-image {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 32px;
+}
+
+.ts-page-heading-image {
+  display: block;
+  width: clamp(150px, 20vw, 220px);
+  height: auto;
+  justify-self: end;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(113, 61, 22, .18);
+}
+
+.ts-solution-main {
+  max-width: 1200px;
+  margin: 0 auto 60px;
+  padding: 0 24px;
+  font-family: Arial, sans-serif;
+}
+
+.ts-feature {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 32px;
+  padding: 30px;
+  margin: 20px 0;
+  border: 1px solid var(--ts-border);
+  border-radius: 24px;
+  background: #fffaf4;
+}
+
+.ts-feature:nth-child(even) .ts-feature-visual {
+  order: 2;
+}
+
+.ts-feature h2 {
+  color: var(--ts-brown);
+  font-size: 27px;
+  margin: 0 0 12px;
+}
+
+.ts-feature p {
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.ts-feature-visual {
+  min-height: 260px;
+  background: #ffdfb6;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  color: #884009;
+  border: 1px solid var(--ts-border);
+  overflow: hidden;
+}
+
+.ts-feature-visual img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: 520px;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(113, 61, 22, .18);
+}
+
+.ts-feature-visual--pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.ts-feature-visual--pair img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: contain;
+}
+
+@keyframes ts-pan-in-left {
+  0% {
+    transform: perspective(1000px) rotateY(-9deg) rotateZ(-2deg) translateX(-46px) scale(1.18);
+  }
+
+  70% {
+    transform: perspective(1000px) rotateY(1.5deg) rotateZ(.3deg) translateX(5px) scale(.99);
+  }
+
+  100% {
+    transform: perspective(1000px) rotateY(0) rotateZ(0) translateX(0) scale(1);
+  }
+}
+
+@keyframes ts-pan-in-right {
+  0% {
+    transform: perspective(1000px) rotateY(9deg) rotateZ(2deg) translateX(46px) scale(1.18);
+  }
+
+  70% {
+    transform: perspective(1000px) rotateY(-1.5deg) rotateZ(-.3deg) translateX(-5px) scale(.99);
+  }
+
+  100% {
+    transform: perspective(1000px) rotateY(0) rotateZ(0) translateX(0) scale(1);
+  }
+}
+
+.ts-animate-ready .ts-feature.is-visible .ts-feature-visual img {
+  animation: ts-pan-in-left 1.05s cubic-bezier(.2, .8, .2, 1) forwards;
+}
+
+.ts-animate-ready .ts-feature:nth-child(even).is-visible .ts-feature-visual img {
+  animation-name: ts-pan-in-right;
+}
+
+.ts-animate-ready .ts-feature-visual--pair img:nth-child(2) {
+  animation-delay: .14s;
+}
+
+.ts-animate-ready .ts-home .photo-card.is-visible img {
+  animation: ts-pan-in-left 1.05s cubic-bezier(.2, .8, .2, 1) forwards;
+}
+
+.ts-animate-ready .ts-home .bottom-photo.is-visible img {
+  animation-name: ts-pan-in-right;
+  animation-delay: .14s;
+}
+
+.ts-animate-ready .ts-page-heading-image {
+  animation: ts-pan-in-right 1.05s cubic-bezier(.2, .8, .2, 1) forwards;
+}
+
+@media(prefers-reduced-motion:reduce) {
+
+  .ts-animate-ready .ts-feature-visual img,
+  .ts-animate-ready .ts-home .photo-card img,
+  .ts-animate-ready .ts-page-heading-image {
+    opacity: 1;
+    animation: none;
+  }
+}
+
+.ts-feature-visual strong {
+  font-size: 24px;
+}
+
+.ts-feature-visual small {
+  margin-top: 12px;
+}
+
+.ts-footer {
+  text-align: center;
+  padding: 25px;
+  font: 14px Arial, sans-serif;
+  color: var(--ts-brown);
+}
+
+body.ts-home {
+  display: block;
+}
+
+.ts-home .main-content {
+  width: 100%;
+}
+
+.ts-home .site-footer {
+  margin-top: 30px;
+}
+
+.ts-problem>.container>header {
+  background: #fffaf4;
+  color: var(--ts-brown);
+  border: 1px solid var(--ts-border);
+  border-bottom: 0;
+  padding: 22px;
+}
+
+.ts-problem>.container>header h1,
+.ts-problem>.container>header h2 {
+  color: var(--ts-brown);
+}
+
+.ts-problem>.container>header h1 {
+  font-family: 'Poppins', sans-serif;
+}
+
+.ts-problem>.container>header .header-line {
+  background: var(--ts-orange);
+}
+
+@media(max-width:760px) {
+  .ts-navbar {
+    flex-direction: column;
+    text-align: center;
+    margin: 16px auto 24px;
+    padding: 18px 12px;
+  }
+
+  .ts-navbar .ts-logo {
+    font-size: 30px;
+  }
+
+  .ts-navbar .ts-links {
+    justify-content: center;
+    gap: 12px 18px;
+  }
+
+  .ts-navbar .ts-links a {
+    font-size: 14px;
+  }
+
+  .ts-feature {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .ts-feature:nth-child(even) .ts-feature-visual {
+    order: 0;
+  }
+
+  .ts-feature-visual {
+    padding: 14px;
+  }
+
+  .ts-feature-visual img {
+    max-height: 460px;
+  }
+
+  .ts-feature-visual--pair {
+    gap: 8px;
+  }
+
+  .ts-feature-visual--pair img {
+    max-height: 360px;
+  }
+
+  .ts-page-heading--with-image {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .ts-page-heading-image {
+    width: min(180px, 100%);
+    justify-self: center;
+  }
+}

@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -117,8 +117,8 @@
             border: 1px solid #FFE5C2;
         }
 
-        #btn-contact:checked ~ .tabs label[for="btn-contact"],
-        #btn-map:checked ~ .tabs label[for="btn-map"] {
+        #btn-contact:checked~.tabs label[for="btn-contact"],
+        #btn-map:checked~.tabs label[for="btn-map"] {
             width: 80px;
             height: 80px;
             font-size: 30px;
@@ -138,11 +138,11 @@
             transition: transform 0.5s ease;
         }
 
-        #btn-contact:checked ~ .slider-window .slider-track {
+        #btn-contact:checked~.slider-window .slider-track {
             transform: translateX(0);
         }
 
-        #btn-map:checked ~ .slider-window .slider-track {
+        #btn-map:checked~.slider-window .slider-track {
             transform: translateX(-50%);
         }
 
@@ -346,7 +346,7 @@
             border: 1px solid #FFE5C2;
         }
 
-        .organizations > h1 {
+        .organizations>h1 {
             color: #713D16;
             font-size: 26px;
         }
@@ -585,27 +585,26 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="shared.css">
 </head>
 
-<body>
+<body class="ts-involved">
 
-    <!-- HEADER -->
-    <header>
-        <h1>Trash<span>Stalk</span></h1>
-
-        <nav>
+    <div class="ts-navbar" role="navigation" aria-label="Main navigation">
+        <a class="ts-logo" href="index.html">Trash<span>Stalk</span></a>
+        <div class="ts-links">
             <a href="index.html">Home</a>
-            <a href="problem.html">The Problem</a>
-            <a href="solutions.html">Solutions</a>
-            <a href="get-involved.html">Get Involved</a>
-        </nav>
-    </header>
+            <a href="issue.html">The Problem</a>
+            <a href="solution.html">Solutions</a>
+            <a href="contact.html" aria-current="page">Get Involved</a>
+        </div>
+    </div>
+
 
     <main>
 
         <div class="page-wrapper">
 
-            <!-- CONTACT SECTION -->
             <section class="card-container" id="contact">
 
                 <h1 class="contact-title">Contact Us</h1>
@@ -629,7 +628,6 @@
 
                     <div class="slider-track">
 
-                        <!-- CONTACT FORM -->
                         <div class="slide">
 
                             <h2>Get in Touch</h2>
@@ -639,45 +637,20 @@
                                 Send us a message!
                             </p>
 
-                            <form action="mailto:trashstalk@example.com"
-                                method="post"
-                                enctype="text/plain">
+                            <form action="mailto:trashstalk@example.com" method="post" enctype="text/plain">
 
                                 <label for="name">Your Name</label>
-                                <input
-                                    type="text"
-                                    id="name"
-                                    name="Name"
-                                    placeholder="Enter your name"
-                                    required
-                                >
+                                <input type="text" id="name" name="Name" placeholder="Enter your name" required>
 
                                 <label for="email">Email Address</label>
-                                <input
-                                    type="email"
-                                    id="email"
-                                    name="Email"
-                                    placeholder="Enter your email"
-                                    required
-                                >
+                                <input type="email" id="email" name="Email" placeholder="Enter your email" required>
 
                                 <label for="subject">Subject</label>
-                                <input
-                                    type="text"
-                                    id="subject"
-                                    name="Subject"
-                                    placeholder="Message subject"
-                                    required
-                                >
+                                <input type="text" id="subject" name="Subject" placeholder="Message subject" required>
 
                                 <label for="message">Your Message</label>
-                                <textarea
-                                    id="message"
-                                    name="Message"
-                                    rows="4"
-                                    placeholder="Write your message..."
-                                    required
-                                ></textarea>
+                                <textarea id="message" name="Message" rows="4" placeholder="Write your message..."
+                                    required></textarea>
 
                                 <button type="submit" class="submit-btn">
                                     Send Message
@@ -687,7 +660,6 @@
 
                         </div>
 
-                        <!-- MAP -->
                         <div class="slide">
 
                             <h2>Find Us Here</h2>
@@ -705,8 +677,7 @@
 
                                 <iframe
                                     src="https://maps.google.com/maps?q=Pamantasan%20ng%20Lungsod%20ng%20Maynila&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                                    loading="lazy"
-                                    allowfullscreen>
+                                    loading="lazy" allowfullscreen>
                                 </iframe>
 
                             </div>
@@ -718,7 +689,6 @@
 
             </section>
 
-            <!-- PLEDGE SECTION -->
             <section class="pledge-container" id="pledge">
 
                 <h2 class="pledge-main-title">
@@ -816,15 +786,9 @@
 
                     </div>
 
-                    <!-- PLEDGE NAME INPUT -->
                     <div class="pledge-sign">
 
-                        <input
-                            type="text"
-                            id="pledgeName"
-                            name="pledgeName"
-                            placeholder="Enter your full name"
-                        >
+                        <input type="text" id="pledgeName" name="pledgeName" placeholder="Enter your full name">
 
                     </div>
 
@@ -834,7 +798,6 @@
 
         </div>
 
-        <!-- ENVIRONMENTAL ORGANIZATIONS -->
         <section class="organizations" id="organizations">
 
             <h1>Environmental Organizations</h1>
@@ -846,7 +809,6 @@
 
             <div class="organization-list">
 
-                <!-- DENR -->
                 <div class="organization-card">
 
                     <div class="organization-heading denr">
@@ -875,7 +837,6 @@
 
                 </div>
 
-                <!-- WWF -->
                 <div class="organization-card">
 
                     <div class="organization-heading wwf">
@@ -902,7 +863,6 @@
 
                 </div>
 
-                <!-- GREENPEACE -->
                 <div class="organization-card">
 
                     <div class="organization-heading greenpeace">
@@ -929,7 +889,6 @@
 
                 </div>
 
-                <!-- MOTHER EARTH FOUNDATION -->
                 <div class="organization-card">
 
                     <div class="organization-heading mother-earth">
@@ -962,7 +921,6 @@
 
     </main>
 
-    <!-- FOOTER -->
     <footer>
 
         <div class="footer-content">
@@ -984,9 +942,9 @@
                 <h3>Quick Links</h3>
 
                 <a href="index.html">Home</a>
-                <a href="problem.html">The Problem</a>
-                <a href="solutions.html">Solutions</a>
-                <a href="get-involved.html">Get Involved</a>
+                <a href="issue.html">The Problem</a>
+                <a href="solution.html">Solutions</a>
+                <a href="contact.html">Get Involved</a>
 
             </div>
 
@@ -1026,4 +984,5 @@
     </footer>
 
 </body>
+
 </html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script>document.documentElement.classList.add('ts-animate-ready');</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrashStalk | Solutions</title>
+  <link rel="stylesheet" href="shared.css">
+</head>
+
+<body>
+  <div class="ts-navbar" role="navigation" aria-label="Main navigation">
+    <a class="ts-logo" href="index.html">Trash<span>Stalk</span></a>
+    <div class="ts-links">
+      <a href="index.html">Home</a>
+      <a href="issue.html">The Problem</a>
+      <a href="solution.html" aria-current="page">Solutions</a>
+      <a href="contact.html">Get Involved</a>
+    </div>
+  </div>
+
+  <div class="ts-page-heading ts-page-heading--with-image">
+    <div>
+      <h1>TrashStalk - an app</h1>
+      <p>TrashStalk is a community-based mobile app for Manila residents to report waste issues, get real-time
+        environmental and weather updates, and share ideas for a cleaner and flood-resilient city.</p>
+    </div>
+    <img class="ts-page-heading-image" src="assets/prototype/welcome.png"
+      alt="TrashStalk app welcome screen with a Get Started button">
+  </div>
+
+  <main class="ts-solution-main">
+    <section class="ts-feature">
+      <div class="ts-feature-visual ts-feature-visual--pair">
+        <img src="assets/prototype/home-dashboard.png"
+          alt="TrashStalk home dashboard showing weather alerts, latest updates, and community status">
+        <img src="assets/prototype/latest-updates.png"
+          alt="Latest Updates screen showing environmental and weather news for Metro Manila">
+      </div>
+      <div>
+        <h2>Get Weather Alerts &amp; Latest Environmental Updates</h2>
+        <p>Stay informed with real-time weather warnings (e.g., typhoons, heavy rainfall) and official environmental
+          news in Manila, such as cleanup drives, waste management programs, and flood advisories.</p>
+      </div>
+    </section>
+
+    <section class="ts-feature">
+      <div class="ts-feature-visual">
+        <img src="assets/prototype/report-concern.png"
+          alt="Report a Concern screen with options for overflowing trash bins, illegal dumping, and uncollected garbage">
+      </div>
+      <div>
+        <h2>Report Waste Issues</h2>
+        <p>Easily report overflowing trash bins, illegal dumping, and uncollected garbage through an online form. Add a
+          photo, location, and short details so the Manila LGU can respond quickly.</p>
+      </div>
+    </section>
+
+    <section class="ts-feature">
+      <div class="ts-feature-visual">
+        <img src="assets/prototype/weather-alerts.png"
+          alt="Weather Alerts screen showing an upcoming tropical depression and preparation reminders">
+      </div>
+      <div>
+        <h2>Alerts Tab</h2>
+        <p>A dedicated tab for all urgent notifications, including weather warnings, flood advisories, drainage
+          reminders, waste collection schedules, and a quick-reference emergency hotlines list.</p>
+      </div>
+    </section>
+
+    <section class="ts-feature">
+      <div class="ts-feature-visual">
+        <img src="assets/prototype/suggestions.png"
+          alt="Community Suggestions screen for sharing waste management and flood prevention ideas">
+      </div>
+      <div>
+        <h2>Share Community Suggestions</h2>
+        <p>A community suggestion box where Manila residents can share ideas, recommendations, and initiatives on proper
+          waste management, recycling, and flood prevention in their area.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="ts-footer">TrashStalk · Group 4 · SDG 11: Sustainable Cities and Communities</footer>
+
+  <script>
+    const features = document.querySelectorAll('.ts-feature');
+
+    const revealVisibleFeatures = () => {
+      features.forEach((feature) => {
+        if (feature.classList.contains('is-visible')) return;
+
+        const rect = feature.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.88 && rect.bottom > 0) {
+          feature.classList.add('is-visible');
+        }
+      });
+    };
+
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.18 });
+
+      features.forEach((feature) => observer.observe(feature));
+    }
+
+    window.addEventListener('scroll', revealVisibleFeatures, { passive: true });
+    window.addEventListener('resize', revealVisibleFeatures);
+    revealVisibleFeatures();
+  </script>
+</body>
+
+</html>

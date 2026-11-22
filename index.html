@@ -1,7 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <script>document.documentElement.classList.add('ts-animate-ready');</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -9,7 +10,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap"
+        rel="stylesheet">
 
     <style>
         * {
@@ -326,34 +329,25 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="shared.css">
 </head>
 
-<body>
+<body class="ts-home">
 
-    <!-- HEADER -->
-    <header class="site-header">
-        <div class="header-frame">
-
-            <div class="header-top-row">
-                <span class="member-credits">
-                    Balmeo, Barrieses, Belandres, Quinto
-                </span>
-            </div>
-
-            <h1 class="main-title">Trash Stalk</h1>
-
-            <div class="header-bottom-row">
-                <span class="group-badge">By: Group 4</span>
-            </div>
-
+    <div class="ts-navbar" role="navigation" aria-label="Main navigation">
+        <a class="ts-logo" href="index.html">Trash<span>Stalk</span></a>
+        <div class="ts-links">
+            <a href="index.html" aria-current="page">Home</a>
+            <a href="issue.html">The Problem</a>
+            <a href="solution.html">Solutions</a>
+            <a href="contact.html">Get Involved</a>
         </div>
-    </header>
+    </div>
 
-    <!-- MAIN CONTENT -->
+
     <main class="main-content">
         <div class="content-grid">
 
-            <!-- LEFT COLUMN -->
             <section class="text-column">
 
                 <hr class="dashed-divider">
@@ -363,11 +357,17 @@
                     <h2 class="section-heading">What is SDG 11?</h2>
 
                     <p>
-                        SDG 11, also known as the “Sustainable Cities and Communities” Development Goal, is a goal created by the United Nations, aiming to transform cities into safer, more sustainable habitats by reducing urban hazards, optimizing resource efficiency, and ensuring resilient infrastructure for every resident.
+                        SDG 11, also known as the “Sustainable Cities and Communities” Development Goal, is a goal
+                        created by the United Nations, aiming to transform cities into safer, more sustainable habitats
+                        by reducing urban hazards, optimizing resource efficiency, and ensuring resilient infrastructure
+                        for every resident.
                     </p>
 
                     <p>
-                        As time goes by, the Philippines' dire need of assistance when it comes to creating thriving, livable cities increases. And because of that, we, Group 5, have developed a plan that can effectively help in that area, particularly towards garbage management and the cleaning of our streets. First, let us identify the problem at hand.
+                        As time goes by, the Philippines' dire need of assistance when it comes to creating thriving,
+                        livable cities increases. And because of that, we, Group 5, have developed a plan that can
+                        effectively help in that area, particularly towards garbage management and the cleaning of our
+                        streets. First, let us identify the problem at hand.
                     </p>
 
                 </div>
@@ -376,12 +376,10 @@
 
             </section>
 
-            <!-- RIGHT COLUMN: IMAGE COLLAGE -->
             <section class="media-collage" aria-label="SDG 11 Visual Collage">
 
                 <div class="top-media-row">
 
-                    <!-- SDG 11 CARD -->
                     <div class="sdg-card">
 
                         <div class="sdg-header">
@@ -393,7 +391,8 @@
                             </div>
                         </div>
 
-                        <svg class="sdg-svg" viewBox="0 0 220 115" fill="currentColor" aria-label="Sustainable Cities Skyline Icon">
+                        <svg class="sdg-svg" viewBox="0 0 220 115" fill="currentColor"
+                            aria-label="Sustainable Cities Skyline Icon">
 
                             <polygon points="10,65 30,45 50,65" />
                             <rect x="14" y="65" width="32" height="44" />
@@ -427,27 +426,21 @@
 
                     </div>
 
-                    <!-- RIZAL MONUMENT PHOTO -->
                     <div class="photo-card top-photo">
 
-                        <img
-                            src="https://commons.wikimedia.org/wiki/Special:FilePath/Rizal_Monument_(Manila,_2024).jpg?width=800"
+                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Rizal_Monument_(Manila,_2024).jpg?width=800"
                             onerror="this.onerror=null;this.src='https://placehold.co/600x480/FFF4E5/713D16?text=Rizal+Park,+Manila';"
-                            alt="Rizal Monument at Rizal Park in Manila, Philippines"
-                        >
+                            alt="Rizal Monument at Rizal Park in Manila, Philippines">
 
                     </div>
 
                 </div>
 
-                <!-- BOTTOM PHOTO -->
                 <div class="photo-card bottom-photo">
 
-                    <img
-                        src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1200&q=80"
+                    <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1200&q=80"
                         onerror="this.onerror=null;this.src='https://placehold.co/1000x450/4b7f52/ffffff?text=Sustainable+Green+City';"
-                        alt="Sustainable city buildings with trees and solar panels"
-                    >
+                        alt="Sustainable city buildings with trees and solar panels">
 
                 </div>
 
@@ -456,26 +449,25 @@
         </div>
     </main>
 
-    <!-- FOOTER NAVIGATION -->
     <footer class="site-footer">
 
         <div class="footer-frame">
 
             <nav class="footer-nav" aria-label="Page Navigation">
 
-                <a href="/index.html" class="nav-pill active">
+                <a href="index.html" class="nav-pill active">
                     [Page 1: The Introduction]
                 </a>
 
-                <a href="/issue.html" class="nav-pill">
+                <a href="issue.html" class="nav-pill">
                     [Page 2: The Problem]
                 </a>
 
-                <a href="/solution.html" class="nav-pill">
+                <a href="solution.html" class="nav-pill">
                     [Page 3: The Solution]
                 </a>
 
-                <a href="/contact.html" class="nav-pill">
+                <a href="contact.html" class="nav-pill">
                     [Page 4: The Way To Get Involved]
                 </a>
 
@@ -490,5 +482,37 @@
 
     </footer>
 
+    <script>
+        const photoCards = document.querySelectorAll('.photo-card');
+
+        const revealVisiblePhotos = () => {
+            photoCards.forEach((card) => {
+                if (card.classList.contains('is-visible')) return;
+
+                const rect = card.getBoundingClientRect();
+                if (rect.top < window.innerHeight * 0.9 && rect.bottom > 0) {
+                    card.classList.add('is-visible');
+                }
+            });
+        };
+
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.18 });
+
+            photoCards.forEach((card) => observer.observe(card));
+        }
+
+        window.addEventListener('scroll', revealVisiblePhotos, { passive: true });
+        window.addEventListener('resize', revealVisiblePhotos);
+        revealVisiblePhotos();
+    </script>
 </body>
+
 </html>
