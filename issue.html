@@ -97,6 +97,17 @@
             letter-spacing: 1px;
         }
 
+
+        .description-image {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            display: block;
+            border-radius: 14px;
+            margin: 20px 0;
+        }
+
+
         .fact {
             background: #FFF8EF;
             border-left: 6px solid #FD9D24;
@@ -120,12 +131,20 @@
             margin-bottom: 0;
         }
 
+
+        .fact-image {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            display: block;
+            border-radius: 10px;
+            margin: 12px 0 15px;
+        }
+
         .highlight {
             color: #D96F0B;
             font-weight: bold;
         }
-
-        /* FOOTER DESIGN */
 
         .site-footer {
             background: #FFA32F;
@@ -187,8 +206,6 @@
             margin: 0;
         }
 
-        /* MOBILE RESPONSIVENESS */
-
         @media (max-width: 600px) {
 
             body {
@@ -205,6 +222,14 @@
 
             header h2 {
                 font-size: 19px;
+            }
+
+            .description-image {
+                height: 220px;
+            }
+
+            .fact-image {
+                height: 190px;
             }
 
             .footer-nav {
@@ -229,7 +254,6 @@
 
 <div class="container">
 
-    <!-- MAIN HEADER -->
 
     <header>
         <h1>TrashStalk</h1>
@@ -243,15 +267,15 @@
         </p>
     </header>
 
-    <!-- DESCRIPTION OF THE ISSUE -->
-
     <section>
 
         <span class="label">UNDERSTANDING THE ISSUE</span>
 
-        <h2 class="section-title">
-            Description of the Issue
-        </h2>
+        <img
+            src="https://ei.marketwatch.com/Multimedia/2019/10/07/Photos/ZH/MW-HS812_plasti_20191007173033_ZH.jpg?uuid=b184d670-e949-11e9-80fa-9c8e992d421e"
+            alt="Plastic waste and environmental pollution"
+            class="description-image"
+        >
 
         <p>
             Improper waste management is a serious environmental problem
@@ -284,8 +308,6 @@
 
     </section>
 
-    <!-- FACTS AND INFORMATION -->
-
     <section>
 
         <span class="label">DID YOU KNOW?</span>
@@ -297,6 +319,12 @@
         <div class="fact">
 
             <h3>01. Improper Waste Disposal and Flooding</h3>
+
+            <img
+                src="https://www.mindanews.com/wp-content/uploads/2018/10/opendumpsite-e1539142229759.jpg"
+                alt="Open dumpsite showing improper waste disposal"
+                class="fact-image"
+            >
 
             <p>
                 According to the Department of Environment and Natural
@@ -310,6 +338,12 @@
         <div class="fact">
 
             <h3>02. Waste Accumulation in Metro Manila Waterways</h3>
+
+            <img
+                src="https://tse1.mm.bing.net/th/id/OIP.l2uCTJ-rOWu4KEpZT8v0IgAAAA?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+                alt="Accumulated garbage and waste in waterways"
+                class="fact-image"
+            >
 
             <p>
                 According to the Philippine Information Agency (2025),
@@ -325,6 +359,12 @@
 
             <h3>03. Flooding and Community Safety</h3>
 
+            <img
+                src="https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2163358468.jpg?q=w_1110,c_fill"
+                alt="Flooding affecting a community"
+                class="fact-image"
+            >
+
             <p>
                 According to the United Nations (n.d.), Sustainable
                 Development Goal 11, Target 11.5, emphasizes the importance
@@ -339,6 +379,12 @@
 
             <h3>04. Environmental Impact of Improper Waste Management</h3>
 
+            <img
+                src="https://blogs.worldbank.org/content/dam/sites/blogs/img/detail/mgr/plastic_waste_philippines_blog.jpg"
+                alt="Plastic waste pollution in the Philippines"
+                class="fact-image"
+            >
+
             <p>
                 According to the United Nations (n.d.), Sustainable
                 Development Goal 11, Target 11.6, highlights the importance
@@ -350,8 +396,6 @@
         </div>
 
     </section>
-
-    <!-- FOOTER NAVIGATION -->
 
     <footer class="site-footer">
 
